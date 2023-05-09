@@ -223,509 +223,6 @@
       </tags>
   </entry>
   <entry>
-    <title>用户管理系统后端</title>
-    <url>/post/29c5a7c0.html</url>
-    <content><![CDATA[<h1 id="用户管理系统后端"><a href="#用户管理系统后端" class="headerlink" title="用户管理系统后端"></a>用户管理系统后端</h1><hr>
-<h1 id="一、项目初始化"><a href="#一、项目初始化" class="headerlink" title="一、项目初始化"></a>一、项目初始化</h1><h2 id="1-1、创建项目"><a href="#1-1、创建项目" class="headerlink" title="1.1、创建项目"></a><strong>1.1、创建项目</strong></h2><blockquote>
-<p>创建SpringBoot项目</p>
-<p>版本：2.7.8</p>
-</blockquote>
-<h2 id="1-2、pom依赖"><a href="#1-2、pom依赖" class="headerlink" title="1.2、pom依赖"></a>1.2、<strong>pom依赖</strong></h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- web --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- mysql --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-j<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- mybatis-plus --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.baomidou<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-plus-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.5.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 代码生成器 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.baomidou<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-plus-generator<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.5.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- freemarker 一个用Java语言编写的模板引擎--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.freemarker<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>freemarker<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- lombok --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.projectlombok<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>lombok<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--redis--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-data-redis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="1-3、properties-yml"><a href="#1-3、properties-yml" class="headerlink" title="1.3、properties.yml"></a>1.3、<strong>properties.yml</strong></h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">80</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">&#x27;061313&#x27;</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:mysql:///xdb</span></span><br><span class="line"><span class="comment">#    driver-class-name: com.mysql.cj.jdbc.Driver</span></span><br><span class="line">  <span class="attr">redis:</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">6379</span></span><br><span class="line">    <span class="attr">host:</span> <span class="string">localhost</span></span><br><span class="line"><span class="attr">logging:</span></span><br><span class="line">  <span class="attr">level:</span></span><br><span class="line">    <span class="attr">com.cheng:</span> <span class="string">debug</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="二、MyBatis-Plus代码生成器"><a href="#二、MyBatis-Plus代码生成器" class="headerlink" title="二、MyBatis-Plus代码生成器"></a>二、MyBatis-Plus代码生成器</h1><h2 id="2-1、创建生成器"><a href="#2-1、创建生成器" class="headerlink" title="2.1、创建生成器"></a>2.1、创建生成器</h2><blockquote>
-<p>在<code>src/test/java/com/cheng/CodeGenerator.java</code>下创建代码生成器</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">url</span> <span class="operator">=</span> <span class="string">&quot;jdbc:mysql:///xdb&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">username</span> <span class="operator">=</span> <span class="string">&quot;root&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">password</span> <span class="operator">=</span> <span class="string">&quot;061313&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">author</span> <span class="operator">=</span> <span class="string">&quot;aaron&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">outputDir</span> <span class="operator">=</span> <span class="string">&quot;E:\\IdeaProjects\\workspace\\x-admin\\src\\main\\java&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">basePackage</span> <span class="operator">=</span> <span class="string">&quot;com.cheng&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">moduleName</span> <span class="operator">=</span> <span class="string">&quot;sys&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">mapperLocation</span> <span class="operator">=</span> <span class="string">&quot;E:\\IdeaProjects\\workspace\\x-admin\\src\\main\\resources\\mapper\\&quot;</span> + moduleName;</span><br><span class="line"><span class="type">String</span> <span class="variable">tableName</span> <span class="operator">=</span> <span class="string">&quot;x_user,x_menu,x_role,x_role_menu,x_user_role&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">tablePrefix</span> <span class="operator">=</span> <span class="string">&quot;x_&quot;</span>;</span><br><span class="line">FastAutoGenerator.create(url, username, password)</span><br><span class="line">        .globalConfig(builder -&gt; &#123;</span><br><span class="line">            builder.author(author) <span class="comment">// 设置作者</span></span><br><span class="line">                    .enableSwagger() <span class="comment">// 开启 swagger 模式</span></span><br><span class="line">                    <span class="comment">//.fileOverride() // 覆盖已生成文件</span></span><br><span class="line">                    .outputDir(outputDir); <span class="comment">// 指定输出目录</span></span><br><span class="line">        &#125;)</span><br><span class="line">        .packageConfig(builder -&gt; &#123;</span><br><span class="line">            builder.parent(basePackage) <span class="comment">// 设置父包名</span></span><br><span class="line">                    .moduleName(moduleName) <span class="comment">// 设置父包模块名</span></span><br><span class="line">                    .pathInfo(Collections.singletonMap(OutputFile.xml, mapperLocation)); <span class="comment">// 设置mapperXml生成路径</span></span><br><span class="line">        &#125;)</span><br><span class="line">        .strategyConfig(builder -&gt; &#123;</span><br><span class="line">            builder.addInclude(tableName) <span class="comment">// 设置需要生成的表名</span></span><br><span class="line">                    .addTablePrefix(tablePrefix); <span class="comment">// 设置过滤表前缀</span></span><br><span class="line">        &#125;)</span><br><span class="line">        .templateEngine(<span class="keyword">new</span> <span class="title class_">FreemarkerTemplateEngine</span>()) <span class="comment">// 使用Freemarker引擎模板，默认的是Velocity引擎模板</span></span><br><span class="line">        .execute();</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="2-2、启动类加注解"><a href="#2-2、启动类加注解" class="headerlink" title="2.2、启动类加注解"></a>2.2、<strong>启动类加注解</strong></h2><blockquote>
-<p>使用<code>@MapperScan</code>注解<code>mapper</code>下的类都不需要再加<code>@Mapper</code></p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@MapperScan(&quot;com.cheng.*.mapper&quot;)</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="3-3、测试"><a href="#3-3、测试" class="headerlink" title="3.3、测试"></a>3.3、测试</h2><ol>
-<li><strong>测试数据层</strong></li>
-</ol>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">XAdminApplicationTests</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Resource</span></span><br><span class="line">    <span class="keyword">private</span> UserMapper userMapper;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">contextLoads</span><span class="params">()</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">getAll</span><span class="params">()</span> &#123;</span><br><span class="line">        List&lt;User&gt; users = userMapper.selectList(<span class="literal">null</span>);</span><br><span class="line">        users.forEach(System.out::println);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<ol>
-<li><strong>测试控制层</strong></li>
-</ol>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/user&quot;)</span></span><br><span class="line"><span class="comment">//@CrossOrigin 解决跨域问题</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">UserController</span> &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>注意</strong></p>
-<ul>
-<li>这里需要使用@RestController因为需要返回的json数据</li>
-</ul>
-<p><strong>具体</strong>：<a href="https://www.wolai.com/pSVQdgwdnjTfJb2hQKNnMJ" title="https://www.wolai.com/pSVQdgwdnjTfJb2hQKNnMJ">https://www.wolai.com/pSVQdgwdnjTfJb2hQKNnMJ</a></p>
-<h1 id="三、公共相应类"><a href="#三、公共相应类" class="headerlink" title="三、公共相应类"></a>三、公共相应类</h1><blockquote>
-<p>为了给前端返回统一的格式，我们需要<strong>统一格式</strong></p>
-</blockquote>
-<h2 id="3-1、创建公共类"><a href="#3-1、创建公共类" class="headerlink" title="3.1、创建公共类"></a>3.1、创建公共类</h2><p>创建<code>com/cheng/common/vo/Result.java</code></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@AllArgsConstructor</span></span><br><span class="line"><span class="meta">@NoArgsConstructor</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Result</span> &lt;T&gt;&#123;</span><br><span class="line">    <span class="keyword">private</span> Integer code;</span><br><span class="line">    <span class="keyword">private</span> String message;</span><br><span class="line">    <span class="keyword">private</span> T data;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; Result&lt;T&gt; <span class="title function_">success</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Result</span>&lt;&gt;(<span class="number">20000</span>,<span class="string">&quot;success&quot;</span>,<span class="literal">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; Result&lt;T&gt; <span class="title function_">success</span><span class="params">(T data)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Result</span>&lt;&gt;(<span class="number">20000</span>,<span class="string">&quot;success&quot;</span>,data);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; Result&lt;T&gt; <span class="title function_">success</span><span class="params">(String message,T data)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Result</span>&lt;&gt;(<span class="number">20000</span>,message,data);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; Result&lt;T&gt; <span class="title function_">success</span><span class="params">(String message)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Result</span>&lt;&gt;(<span class="number">20000</span>,message,<span class="literal">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span>&lt;T&gt;  Result&lt;T&gt; <span class="title function_">fail</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Result</span>&lt;&gt;(<span class="number">20001</span>,<span class="string">&quot;fail&quot;</span>,<span class="literal">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span>&lt;T&gt;  Result&lt;T&gt; <span class="title function_">fail</span><span class="params">(Integer code)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Result</span>&lt;&gt;(code,<span class="string">&quot;fail&quot;</span>,<span class="literal">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span>&lt;T&gt;  Result&lt;T&gt; <span class="title function_">fail</span><span class="params">(Integer code, String message)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Result</span>&lt;&gt;(code,message,<span class="literal">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span>&lt;T&gt;  Result&lt;T&gt; <span class="title function_">fail</span><span class="params">( String message)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Result</span>&lt;&gt;(<span class="number">20001</span>,message,<span class="literal">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="四、登录相关接口"><a href="#四、登录相关接口" class="headerlink" title="四、登录相关接口"></a>四、登录相关接口</h1><h2 id="4-1、登录"><a href="#4-1、登录" class="headerlink" title="4.1、登录"></a>4.1、登录</h2><blockquote>
-<p>查看前端项目时，点击登陆时，打开F12查看发送了哪些请求</p>
-<p>这样就可以对这些请求进行编写</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>接口属性</th>
-<th>值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>url</td>
-<td>&#x2F;user&#x2F;login</td>
-</tr>
-<tr>
-<td>method</td>
-<td>post</td>
-</tr>
-<tr>
-<td>请求参数</td>
-<td>username  &amp;#xA;password</td>
-</tr>
-</tbody></table>
-<p>返回参数：</p>
-<ol>
-<li><code>code: 20000</code></li>
-<li><code>data: &#123;token: &quot;user:90d64b1d-8b35-4162-b2e6-a9a9af231f03&quot;&#125;</code></li>
-<li><code>token: &quot;user:90d64b1d-8b35-4162-b2e6-a9a9af231f03&quot;</code></li>
-<li><code>message: &quot;success&quot;</code></li>
-</ol>
-<h3 id="1-UserController"><a href="#1-UserController" class="headerlink" title="1.UserController"></a>1.<strong>UserController</strong></h3><blockquote>
-<p>在<code>UserController</code>类中编写login方法</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@PostMapping(&quot;/login&quot;)</span></span><br><span class="line"><span class="keyword">public</span> Result&lt;Map&lt;String,Object&gt;&gt; <span class="title function_">login</span><span class="params">(<span class="meta">@RequestBody</span> User user)</span>&#123;</span><br><span class="line">    Map&lt;String,Object&gt; data = userService.login(user);</span><br><span class="line">    <span class="keyword">if</span>(data != <span class="literal">null</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> Result.success(data);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> Result.fail(<span class="number">20002</span>,<span class="string">&quot;用户名或密码错误&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>知识点</strong></p>
-<ul>
-<li><a href="https://blog.csdn.net/justry_deng/article/details/80972817" title="@RequestBody的使用">@RequestBody的使用</a></li>
-</ul>
-<h3 id="2-UserServiceImpl"><a href="#2-UserServiceImpl" class="headerlink" title="2.UserServiceImpl"></a>2.<strong>UserServiceImpl</strong></h3><blockquote>
-<p>在<code>UserServiceImpl</code>编写登录逻辑</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> Map&lt;String, Object&gt; <span class="title function_">login</span><span class="params">(User user)</span> &#123;</span><br><span class="line"></span><br><span class="line">    LambdaQueryWrapper&lt;User&gt; lqw = <span class="keyword">new</span> <span class="title class_">LambdaQueryWrapper</span>&lt;&gt;();</span><br><span class="line">    <span class="comment">// 根据用户名和密码查询</span></span><br><span class="line">    lqw.eq(User::getUsername, user.getUsername());</span><br><span class="line">    lqw.eq(User::getPassword, user.getPassword());</span><br><span class="line">    <span class="type">User</span> <span class="variable">loginUser</span> <span class="operator">=</span> <span class="built_in">this</span>.baseMapper.selectOne(lqw);</span><br><span class="line">    <span class="comment">// 如果结果不为空，则生成token，将用户信息存入redis</span></span><br><span class="line">    <span class="keyword">if</span> (loginUser != <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">key</span> <span class="operator">=</span> <span class="string">&quot;user:&quot;</span> + UUID.randomUUID();</span><br><span class="line">        <span class="comment">// 存入redis</span></span><br><span class="line">        loginUser.setPassword(<span class="literal">null</span>);</span><br><span class="line">        redisTemplate.opsForValue().set(key,loginUser,<span class="number">30</span>, TimeUnit.HOURS);</span><br><span class="line">        Map&lt;String,Object&gt; data = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        data.put(<span class="string">&quot;token&quot;</span>,key);</span><br><span class="line">        <span class="keyword">return</span> data;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="3-整合Redis"><a href="#3-整合Redis" class="headerlink" title="3.整合Redis"></a>3.<strong>整合Redis</strong></h3><ol>
-<li><strong>pom</strong></li>
-</ol>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- redis --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-data-redis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<ol>
-<li><strong>yml</strong></li>
-</ol>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">redis:</span></span><br><span class="line">    <span class="attr">host:</span> <span class="string">localhost</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">6379</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<p>3.<strong>配置类</strong></p>
-<blockquote>
-<p>创建config包下MyRedisConfig配置类</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MyRedisConfig</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Resource</span></span><br><span class="line">    <span class="keyword">private</span> RedisConnectionFactory factory;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> RedisTemplate&lt;String,Object&gt; <span class="title function_">redisTemplate</span><span class="params">()</span> &#123;</span><br><span class="line">        RedisTemplate&lt;String, Object&gt; redisTemplate = <span class="keyword">new</span> <span class="title class_">RedisTemplate</span>&lt;&gt;();</span><br><span class="line">        redisTemplate.setConnectionFactory(factory);</span><br><span class="line">        redisTemplate.setKeySerializer(<span class="keyword">new</span> <span class="title class_">StringRedisSerializer</span>());</span><br><span class="line"></span><br><span class="line">        Jackson2JsonRedisSerializer&lt;Object&gt; serializer = <span class="keyword">new</span> <span class="title class_">Jackson2JsonRedisSerializer</span>&lt;&gt;(Object.class);</span><br><span class="line">        redisTemplate.setValueSerializer(serializer);</span><br><span class="line"></span><br><span class="line">        <span class="type">ObjectMapper</span> <span class="variable">om</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ObjectMapper</span>();</span><br><span class="line">        om.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);</span><br><span class="line">        om.setDateFormat(<span class="keyword">new</span> <span class="title class_">SimpleDateFormat</span>(<span class="string">&quot;yyyy-MM-dd HH:mm:ss&quot;</span>));</span><br><span class="line">        om.setTimeZone(TimeZone.getDefault());</span><br><span class="line">        om.configure(MapperFeature.USE_ANNOTATIONS, <span class="literal">false</span>);</span><br><span class="line">        om.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, <span class="literal">false</span>);</span><br><span class="line">        om.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, <span class="literal">false</span>);</span><br><span class="line">        om.activateDefaultTyping(LaissezFaireSubTypeValidator.instance, ObjectMapper.DefaultTyping.NON_FINAL, JsonTypeInfo.As.PROPERTY);</span><br><span class="line">        om.setSerializationInclusion(JsonInclude.Include.NON_NULL);</span><br><span class="line">        serializer.setObjectMapper(om);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> redisTemplate;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 存入redis</span></span><br><span class="line">loginUser.setPassword(<span class="literal">null</span>);</span><br><span class="line">redisTemplate.opsForValue().set(key,loginUser,<span class="number">30</span>, TimeUnit.HOURS);</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="4-2、获取用户信息"><a href="#4-2、获取用户信息" class="headerlink" title="4.2、获取用户信息"></a>4.2、获取用户信息</h2><table>
-<thead>
-<tr>
-<th>接口属性</th>
-<th>值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>url</td>
-<td>&#x2F;user&#x2F;info?token&#x3D;xxx</td>
-</tr>
-<tr>
-<td>method</td>
-<td>get</td>
-</tr>
-<tr>
-<td>请求参数</td>
-<td>token</td>
-</tr>
-</tbody></table>
-<p>返回参数：</p>
-<ol>
-<li><code>code: 20000</code></li>
-<li><code>data: &#123;token: &quot;user:2528455e-da46-4e9b-a789-fbcdfcad3e8d&quot;&#125;</code></li>
-<li><code>token: &quot;user:2528455e-da46-4e9b-a789-fbcdfcad3e8d&quot;</code></li>
-<li><code>message: &quot;success&quot;</code></li>
-</ol>
-<h3 id="1-UserController-1"><a href="#1-UserController-1" class="headerlink" title="1.UserController"></a>1.UserController</h3><blockquote>
-<p>获取<code>user</code>对象需要反序列化</p>
-</blockquote>
-<p>在<code>pom.xml</code>中引入依赖</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--fastjson--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba.fastjson2<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>fastjson2<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.0.25<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>UserController</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping(&quot;/info&quot;)</span></span><br><span class="line"><span class="keyword">public</span> Result&lt;?&gt; getUserInfo(<span class="meta">@Param(&quot;token&quot;)</span> String token)&#123;</span><br><span class="line">    Map&lt;String,Object&gt; data = userService.getUserInfo(token);</span><br><span class="line">    <span class="keyword">if</span>(data != <span class="literal">null</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> Result.success(data);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> Result.fail(<span class="number">20003</span>,<span class="string">&quot;用户信息获取失败&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="2-UserServiceImpl-1"><a href="#2-UserServiceImpl-1" class="headerlink" title="2.UserServiceImpl"></a>2.<strong>UserServiceImpl</strong></h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> Map&lt;String, Object&gt; <span class="title function_">getUserInfo</span><span class="params">(String token)</span> &#123;</span><br><span class="line">    <span class="comment">// 从redis查询token</span></span><br><span class="line">    <span class="type">Object</span> <span class="variable">obj</span> <span class="operator">=</span> redisTemplate.opsForValue().get(token);</span><br><span class="line">    <span class="comment">// 反序列化</span></span><br><span class="line">    <span class="type">User</span> <span class="variable">user</span> <span class="operator">=</span> JSON.parseObject(JSON.toJSONString(obj),User.class);</span><br><span class="line">    <span class="keyword">if</span>(user != <span class="literal">null</span>)&#123;</span><br><span class="line">        Map&lt;String, Object&gt; data =  <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        data.put(<span class="string">&quot;name&quot;</span>,user.getUsername());</span><br><span class="line">        data.put(<span class="string">&quot;avatar&quot;</span>,user.getAvatar());</span><br><span class="line">        List&lt;String&gt; roleList = <span class="built_in">this</span>.getBaseMapper().getRoleNamesByUserId(user.getId());</span><br><span class="line">        data.put(<span class="string">&quot;roles&quot;</span>, roleList);</span><br><span class="line">        <span class="keyword">return</span> data;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="3-UserMapper-xml"><a href="#3-UserMapper-xml" class="headerlink" title="3.UserMapper.xml"></a>3.UserMapper.xml</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;getRoleNamesByUserId&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;Integer&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;String&quot;</span>&gt;</span></span><br><span class="line">    SELECT</span><br><span class="line">    b.role_name</span><br><span class="line">    FROM x_user_role a,x_role b</span><br><span class="line">    WHERE a.`user_id` = #&#123;userId&#125;</span><br><span class="line">    AND a.`role_id` = b.`role_id`</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="4-UserMapper-java"><a href="#4-UserMapper-java" class="headerlink" title="4.UserMapper.java"></a>4.UserMapper.java</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">UserMapper</span> <span class="keyword">extends</span> <span class="title class_">BaseMapper</span>&lt;User&gt; &#123;</span><br><span class="line">    </span><br><span class="line">    List&lt;String&gt; <span class="title function_">getRoleNamesByUserId</span><span class="params">(Integer userId)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="4-3、注销"><a href="#4-3、注销" class="headerlink" title="4.3、注销"></a>4.3、注销</h2><table>
-<thead>
-<tr>
-<th>接口属性</th>
-<th>值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>url</td>
-<td>&#x2F;user&#x2F;logout</td>
-</tr>
-<tr>
-<td>method</td>
-<td>post</td>
-</tr>
-</tbody></table>
-<h3 id="1-UserController-2"><a href="#1-UserController-2" class="headerlink" title="1.UserController"></a>1.UserController</h3><blockquote>
-<p>X-Token 是从请求头里传过来的</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@PostMapping(&quot;/logout&quot;)</span></span><br><span class="line"><span class="keyword">public</span> Result&lt;?&gt; logout(<span class="meta">@RequestHeader(&quot;X-Token&quot;)</span> String token) &#123;</span><br><span class="line">    userService.logout(token);</span><br><span class="line">    <span class="keyword">return</span> Result.success();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="2-UserServiceIpml"><a href="#2-UserServiceIpml" class="headerlink" title="2.UserServiceIpml"></a>2.UserServiceIpml</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">logout</span><span class="params">(String token)</span> &#123;</span><br><span class="line">    redisTemplate.delete(token);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h1 id="五、用户列表查询接口"><a href="#五、用户列表查询接口" class="headerlink" title="五、用户列表查询接口"></a>五、用户列表查询接口</h1><h2 id="1、UserController"><a href="#1、UserController" class="headerlink" title="1、UserController"></a>1、UserController</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping(&quot;/list&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> Result&lt;Map&lt;String,Object&gt;&gt; <span class="title function_">getUserList</span><span class="params">(<span class="meta">@RequestParam(value = &quot;username&quot;,required = false)</span> String username,</span></span><br><span class="line"><span class="params">                                                  <span class="meta">@RequestParam(value = &quot;phone&quot;,required = false)</span> String phone,</span></span><br><span class="line"><span class="params">                                                  <span class="meta">@RequestParam(&quot;pageNo&quot;)</span> Long pageNO,</span></span><br><span class="line"><span class="params">                                                  <span class="meta">@RequestParam(&quot;pageSize&quot;)</span> Long pageSize)</span> &#123;</span><br><span class="line">        LambdaQueryWrapper&lt;User&gt; lqw  = <span class="keyword">new</span> <span class="title class_">LambdaQueryWrapper</span>&lt;&gt;();</span><br><span class="line">        lqw.likeRight(StringUtils.hasLength(username),User::getUsername,username);</span><br><span class="line">        lqw.likeRight(StringUtils.hasLength(phone),User::getPhone,phone);</span><br><span class="line">        <span class="comment">// 按用户id降序排序</span></span><br><span class="line"><span class="comment">//        lqw.orderByDesc(User::getId);</span></span><br><span class="line">        Page&lt;User&gt; page = <span class="keyword">new</span> <span class="title class_">Page</span>&lt;&gt;(pageNO,pageSize);</span><br><span class="line">        userService.page(page,lqw);</span><br><span class="line"></span><br><span class="line">        Map&lt;String ,Object&gt; data = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        data.put(<span class="string">&quot;total&quot;</span>,page.getTotal());</span><br><span class="line">        data.put(<span class="string">&quot;rows&quot;</span>,page.getRecords());</span><br><span class="line">        <span class="keyword">return</span> Result.success(data);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>注意：</strong></p>
-<ul>
-<li>用分页查询时需要若没有配置分页拦截器则查不到total的总记录数</li>
-</ul>
-<p><strong>解决</strong></p>
-<ul>
-<li>创建<code>MybatisPlusInterceptor</code></li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MPConfig</span> &#123;</span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> MybatisPlusInterceptor <span class="title function_">mybatisPlusInterceptor</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="type">MybatisPlusInterceptor</span> <span class="variable">interceptor</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">MybatisPlusInterceptor</span>();</span><br><span class="line">        interceptor.addInnerInterceptor(<span class="keyword">new</span> <span class="title class_">PaginationInnerInterceptor</span>(DbType.MYSQL));</span><br><span class="line">        <span class="keyword">return</span> interceptor;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="2、用户列表前端对接"><a href="#2、用户列表前端对接" class="headerlink" title="2、用户列表前端对接"></a>2、用户列表前端对接</h2><blockquote>
-<p><code>src\api\userManager.js</code>中每个方法对应一个后端接口</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="title function_">getUserList</span>(<span class="params">searchModel</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="title function_">request</span>(&#123;</span><br><span class="line">          <span class="attr">url</span>: <span class="string">&#x27;/user/list&#x27;</span>,</span><br><span class="line">          <span class="attr">method</span>: <span class="string">&#x27;get&#x27;</span>,</span><br><span class="line">          <span class="attr">params</span>: &#123;</span><br><span class="line">              <span class="attr">pageNo</span>: searchModel.<span class="property">pageNo</span>,</span><br><span class="line">              <span class="attr">pageSize</span>: searchModel.<span class="property">pageSize</span>,</span><br><span class="line">              <span class="attr">username</span>: searchModel.<span class="property">username</span>,</span><br><span class="line">              <span class="attr">phone</span>: searchModel.<span class="property">phone</span></span><br><span class="line">          &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<blockquote>
-<p><code>src\views\sys\user.vue</code>中调用上述方法，具体如下</p>
-</blockquote>
-<p>调用前需要导入<code>import userApi from &quot;@/api/userManage&quot;;</code></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">import</span> userApi <span class="keyword">from</span> <span class="string">&quot;@/api/userManage&quot;</span>;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">getUserList</span>(<span class="params"></span>) &#123;</span><br><span class="line">    userApi.<span class="title function_">getUserList</span>(<span class="variable language_">this</span>.<span class="property">searchModel</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">userList</span> = response.<span class="property">data</span>.<span class="property">rows</span>;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">total</span> = response.<span class="property">data</span>.<span class="property">total</span>;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>注意</strong></p>
-<p>但是需要上述方法调用才会执行，这样登录进去就可以看到数据</p>
-<p>所有需要让页面加载时就做一次查询</p>
-<p>此时我们需要用到钩子函数</p>
-<p>methods中定义方法</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">created</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="title function_">getUserList</span>();</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-
-
-<p>实现条件查询，需要为查询按钮绑定函数</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;el-button</span><br><span class="line">@click=&quot;getUserList&quot;</span><br><span class="line">type=&quot;primary&quot;</span><br><span class="line">icon=&quot;el-icon-search&quot;</span><br><span class="line">round</span><br><span class="line">&gt;查询&lt;/el-button&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>实现分页查询按5、10条数据展示</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">handleSizeChange</span>(<span class="params">pageSize</span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">searchModel</span>.<span class="property">pageSize</span> = pageSize;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="title function_">getUserList</span>();</span><br><span class="line">&#125;,</span><br><span class="line"><span class="title function_">handleCurrentChange</span>(<span class="params">pageNo</span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">searchModel</span>.<span class="property">pageNo</span> = pageNo;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="title function_">getUserList</span>();</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-
-
-<p>由于分页查询出来的数据每次都是从1开始的，需要通过计算显示该条数据的正确序号</p>
-<p>在查询列表里计算</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template slot-scope=&quot;scope&quot;&gt;</span><br><span class="line">  &#123;&#123;</span><br><span class="line">    (searchModel.pageNo - 1) * searchModel.pageSize + scope.$index + 1</span><br><span class="line">  &#125;&#125;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>一键删除输入框的内容</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;el-input</span><br><span class="line">  v-model=&quot;searchModel.username&quot;</span><br><span class="line">  placeholder=&quot;用户名&quot;</span><br><span class="line">  clearable</span><br><span class="line">&gt;&lt;/el-input&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h1 id="六、新增用户接口"><a href="#六、新增用户接口" class="headerlink" title="六、新增用户接口"></a>六、新增用户接口</h1><h2 id="1、UserController-1"><a href="#1、UserController-1" class="headerlink" title="1、UserController"></a>1、UserController</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@PostMapping</span></span><br><span class="line"><span class="keyword">public</span> Result&lt;?&gt; addUser(<span class="meta">@RequestBody</span> User user) &#123;</span><br><span class="line">    user.setPassword(passwordEncoder.encode(user.getPassword()));</span><br><span class="line">    userService.save(user);</span><br><span class="line">    <span class="keyword">return</span> Result.success(<span class="string">&quot;新增用户成功&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="2、设计前端新增界面"><a href="#2、设计前端新增界面" class="headerlink" title="2、设计前端新增界面"></a>2、设计前端新增界面</h2><blockquote>
-<p>使用对话框组件</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;el-dialog title=&quot;收货地址&quot; :visible.sync=&quot;dialogFormVisible&quot;&gt;</span><br><span class="line">  &lt;el-form :model=&quot;form&quot;&gt;</span><br><span class="line">    &lt;el-form-item label=&quot;活动名称&quot; :label-width=&quot;formLabelWidth&quot;&gt;</span><br><span class="line">      &lt;el-input v-model=&quot;form.name&quot; autocomplete=&quot;off&quot;&gt;&lt;/el-input&gt;</span><br><span class="line">    &lt;/el-form-item&gt;</span><br><span class="line">    &lt;el-form-item label=&quot;活动区域&quot; :label-width=&quot;formLabelWidth&quot;&gt;</span><br><span class="line">      &lt;el-select v-model=&quot;form.region&quot; placeholder=&quot;请选择活动区域&quot;&gt;</span><br><span class="line">        &lt;el-option label=&quot;区域一&quot; value=&quot;shanghai&quot;&gt;&lt;/el-option&gt;</span><br><span class="line">        &lt;el-option label=&quot;区域二&quot; value=&quot;beijing&quot;&gt;&lt;/el-option&gt;</span><br><span class="line">      &lt;/el-select&gt;</span><br><span class="line">    &lt;/el-form-item&gt;</span><br><span class="line">  &lt;/el-form&gt;</span><br><span class="line">  &lt;div slot=&quot;footer&quot; class=&quot;dialog-footer&quot;&gt;</span><br><span class="line">    &lt;el-button @click=&quot;dialogFormVisible = false&quot;&gt;取 消&lt;/el-button&gt;</span><br><span class="line">    &lt;el-button type=&quot;primary&quot; @click=&quot;dialogFormVisible = false&quot;&gt;确 定&lt;/el-button&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/el-dialog&gt;</span><br></pre></td></tr></table></figure>
-
-<p>复用<code>title</code>，因为后面修改用户需要在掉一次该对话框</p>
-<p>使用 <code>:title</code>绑定&amp;#x20;</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;el-dialog</span><br><span class="line">      @close=&quot;clearForm&quot;</span><br><span class="line">      :title=&quot;title&quot;</span><br><span class="line">      :visible.sync=&quot;dialogFormVisible&quot;&gt;</span><br></pre></td></tr></table></figure>
-
-<p>同样需要在scrip下data中定义title</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">title</span>: <span class="string">&quot;&quot;</span>,</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>修改需要绑定的属性</strong></p>
-<ul>
-<li><code>v-model</code></li>
-</ul>
-<p><strong>定义数据</strong></p>
-<ul>
-<li><code>label-width</code> :指的时下面的宽度</li>
-</ul>
-<p><img src="/image/laybel-width_uxbls2I7kf.png"></p>
-<p><strong>为新增按钮绑定单击事件</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;el-col :span=&quot;4&quot; align=&quot;right&quot;&gt;</span><br><span class="line">  &lt;el-button</span><br><span class="line">    @click=&quot;openEditUI(null)&quot;</span><br><span class="line">    type=&quot;primary&quot;</span><br><span class="line">    icon=&quot;el-icon-plus&quot;</span><br><span class="line">    circle</span><br><span class="line">  &gt;&lt;/el-button&gt;</span><br><span class="line">&lt;/el-col&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>定义<code>openEditUI</code> 方法</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">openEditUI</span>(<span class="params">id</span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">title</span> = <span class="string">&#x27;新增用户&#x27;</span>,</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">dialogFormVisible</span> = <span class="literal">true</span>;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>问题</strong></p>
-<p>当我们点开新增按钮并填写了用户信息时之后，关闭对话框</p>
-<p>下次重新打开，会发现上一次输入的数据还在上面</p>
-<p><strong>解决</strong></p>
-<blockquote>
-<p>对话框组件提供了一个关闭(close)事件</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!-- 用户信息编辑对话框 --&gt;</span><br><span class="line">&lt;el-dialog</span><br><span class="line">  @close=&quot;clearForm&quot;</span><br><span class="line">  :title=&quot;title&quot;</span><br><span class="line">  :visible.sync=&quot;dialogFormVisible&quot;&gt;</span><br></pre></td></tr></table></figure>
-
-<p>定义<code>clearlForm</code>方法</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">clearForm</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">userForm</span> = &#123;&#125;;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">$refs</span>.<span class="property">userFormRef</span>.<span class="title function_">clearValidate</span>();</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="3、表单验证"><a href="#3、表单验证" class="headerlink" title="3、表单验证"></a>3、表单验证</h2><blockquote>
-<p>Form 组件提供了表单验证的功能，只需要通过 <code>rules</code> 属性传入约定的验证规则</p>
-<p>并将 Form-Item 的 <code>prop</code> 属性设置为需校验的字段名即可。</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;el-form :model=&quot;userForm&quot; ref=&quot;userFormRef&quot; :rules=&quot;rules&quot;&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">rules</span>: &#123;</span><br><span class="line">  <span class="attr">username</span>: [</span><br><span class="line">    &#123; <span class="attr">required</span>: <span class="literal">true</span>, <span class="attr">message</span>: <span class="string">&quot;请输入用户名&quot;</span>, <span class="attr">trigger</span>: <span class="string">&quot;blur&quot;</span> &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">min</span>: <span class="number">3</span>,</span><br><span class="line">      <span class="attr">max</span>: <span class="number">20</span>,</span><br><span class="line">      <span class="attr">message</span>: <span class="string">&quot;长度在 3 到 20 个字符&quot;</span>,</span><br><span class="line">      <span class="attr">trigger</span>: <span class="string">&quot;blur&quot;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">password</span>: [</span><br><span class="line">    &#123; <span class="attr">required</span>: <span class="literal">true</span>, <span class="attr">message</span>: <span class="string">&quot;密码不能为空&quot;</span>, <span class="attr">trigger</span>: <span class="string">&quot;blur&quot;</span> &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">min</span>: <span class="number">6</span>,</span><br><span class="line">      <span class="attr">max</span>: <span class="number">20</span>,</span><br><span class="line">      <span class="attr">message</span>: <span class="string">&quot;长度在 6 到 16 个字符&quot;</span>,</span><br><span class="line">      <span class="attr">trigger</span>: <span class="string">&quot;blur&quot;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">phone</span>: [</span><br><span class="line">    &#123; <span class="attr">required</span>: <span class="literal">true</span>, <span class="attr">message</span>: <span class="string">&quot;请输入手机号码&quot;</span>, <span class="attr">trigger</span>: <span class="string">&quot;blur&quot;</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">validator</span>: checkPhone, <span class="attr">trigger</span>: <span class="string">&quot;blur&quot;</span> &#125;,</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">email</span>: [</span><br><span class="line">    &#123; <span class="attr">required</span>: <span class="literal">true</span>, <span class="attr">message</span>: <span class="string">&quot;请输入电子邮件&quot;</span>, <span class="attr">trigger</span>: <span class="string">&quot;blur&quot;</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">validator</span>: checkEmail, <span class="attr">trigger</span>: <span class="string">&quot;blur&quot;</span> &#125;,</span><br><span class="line">  ],</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-<p><code>required: true</code> :表示必填项</p>
-<p><code>trigger: &quot;blur&quot;</code> : 表示失去焦点时触发&amp;#x20;</p>
-<p><strong>使用表单验证需要加</strong>**<code>prop</code>**<strong>属性</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!-- 用户名 --&gt;</span><br><span class="line">&lt;el-form-item</span><br><span class="line">  label=&quot;用户名&quot;</span><br><span class="line">  prop=&quot;username&quot;</span><br><span class="line">  :label-width=&quot;formLabelWidth&quot;</span><br><span class="line">  &gt;&lt;i class=&quot;el-icon-user-solid&quot;&gt;&lt;/i&gt;</span><br><span class="line">  &lt;el-input v-model=&quot;userForm.username&quot; autocomplete=&quot;off&quot;&gt;&lt;/el-input&gt;</span><br><span class="line">&lt;/el-form-item&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>自定义校验规则</strong></p>
-<p>在<code>data</code>中定义函数</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">data</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> <span class="title function_">checkEmail</span> = (<span class="params">rule, value, callback</span>) =&gt; &#123;</span><br><span class="line">      <span class="keyword">var</span> reg = <span class="regexp">/^([a-zA-Z\d][\w-]&#123;2,&#125;)@(\w&#123;2,&#125;)\.([a-z]&#123;2,&#125;)(\.[a-z]&#123;2,&#125;)?$/</span>;</span><br><span class="line">      <span class="keyword">if</span> (!reg.<span class="title function_">test</span>(value)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="title function_">callback</span>(<span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&quot;邮箱格式错误&quot;</span>));</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="title function_">callback</span>();</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">var</span> <span class="title function_">checkPhone</span> = (<span class="params">rule, value, callback</span>) =&gt; &#123;</span><br><span class="line">      <span class="keyword">let</span> reg = <span class="regexp">/^1[3|4|5|7|8][0-9]&#123;9&#125;$/</span>;</span><br><span class="line">      <span class="keyword">if</span> (!reg.<span class="title function_">test</span>(value)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="title function_">callback</span>(<span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&quot;号码格式错误&quot;</span>));</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="title function_">callback</span>();</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure>
-
-<p>调用</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">phone</span>: [</span><br><span class="line">  &#123; <span class="attr">required</span>: <span class="literal">true</span>, <span class="attr">message</span>: <span class="string">&quot;请输入手机号码&quot;</span>, <span class="attr">trigger</span>: <span class="string">&quot;blur&quot;</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">validator</span>: checkPhone, <span class="attr">trigger</span>: <span class="string">&quot;blur&quot;</span> &#125;,</span><br><span class="line">],</span><br><span class="line"><span class="attr">email</span>: [</span><br><span class="line">  &#123; <span class="attr">required</span>: <span class="literal">true</span>, <span class="attr">message</span>: <span class="string">&quot;请输入电子邮件&quot;</span>, <span class="attr">trigger</span>: <span class="string">&quot;blur&quot;</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">validator</span>: checkEmail, <span class="attr">trigger</span>: <span class="string">&quot;blur&quot;</span> &#125;,</span><br><span class="line">],</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>小问题</strong></p>
-<blockquote>
-<p>上一次验证的提示信息在下一次打开时未消失</p>
-<p>需要清理校验结果</p>
-</blockquote>
-<p><strong>处理过程</strong></p>
-<blockquote>
-<p>定义<code>ref</code>具体如下</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;!-- 用户信息编辑对话框 --&gt;</span><br><span class="line">&lt;el-dialog</span><br><span class="line">  @close=&quot;clearForm&quot;</span><br><span class="line">  :title=&quot;title&quot;</span><br><span class="line">  :visible.sync=&quot;dialogFormVisible&quot;</span><br><span class="line">&gt;</span><br><span class="line">  &lt;el-form :model=&quot;userForm&quot; ref=&quot;userFormRef&quot; :rules=&quot;rules&quot;&gt;</span><br><span class="line">    &lt;!-- 用户名 --&gt;</span><br><span class="line">    &lt;el-form-item</span><br><span class="line">      label=&quot;用户名&quot;</span><br><span class="line">      prop=&quot;username&quot;</span><br><span class="line">      :label-width=&quot;formLabelWidth&quot;</span><br><span class="line">      &gt;&lt;i class=&quot;el-icon-user-solid&quot;&gt;&lt;/i&gt;</span><br><span class="line">      &lt;el-input v-model=&quot;userForm.username&quot; autocomplete=&quot;off&quot;&gt;&lt;/el-input&gt;</span><br><span class="line">    &lt;/el-form-item&gt;</span><br></pre></td></tr></table></figure>
-
-<p>clearForm方法中</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">clearForm</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">userForm</span> = &#123;&#125;;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">$refs</span>.<span class="property">userFormRef</span>.<span class="title function_">clearValidate</span>();</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>点确定按钮也需要进行表单校验</strong></p>
-<blockquote>
-<p>为确定按钮添加保存用户的单击事件</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;el-button type=&quot;primary&quot; @click=&quot;saveUser&quot;&gt;确 定&lt;/el-button&gt;</span><br></pre></td></tr></table></figure>
-
-<p>实现<code>saveUser</code>方法</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">saveUser</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="comment">// alert(&quot;1234&quot;);</span></span><br><span class="line">  <span class="comment">/* 先触发表单验证 */</span></span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">$refs</span>.<span class="property">userFormRef</span>.<span class="title function_">validate</span>(<span class="function">(<span class="params">valid</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (valid) &#123;</span><br><span class="line">      <span class="comment">// 提交给后台</span></span><br><span class="line">      userApi.<span class="title function_">saveUser</span>(<span class="variable language_">this</span>.<span class="property">userForm</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 成功提示</span></span><br><span class="line">        <span class="variable language_">this</span>.$message(&#123;</span><br><span class="line">          <span class="attr">message</span>: response.<span class="property">message</span>,</span><br><span class="line">          <span class="attr">type</span>: <span class="string">&quot;success&quot;</span>,</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="comment">// 关闭对话框</span></span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">dialogFormVisible</span> = <span class="literal">false</span>;</span><br><span class="line">        <span class="comment">// 刷新表格</span></span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">getUserList</span>();</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;error submit!!&quot;</span>);</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="4、表单提交"><a href="#4、表单提交" class="headerlink" title="4、表单提交"></a>4、表单提交</h2><p><strong>前后端对接</strong></p>
-<p><strong>后端</strong></p>
-<blockquote>
-<p>后端新增用户已实现</p>
-</blockquote>
-<p><strong>前端</strong></p>
-<blockquote>
-<p><code>src\api\userManage.js</code>下创建交互方法</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">addUser</span>(<span class="params">user</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">request</span>(&#123;</span><br><span class="line">        <span class="attr">url</span>: <span class="string">&#x27;/user&#x27;</span>,</span><br><span class="line">        <span class="attr">method</span>: <span class="string">&#x27;post&#x27;</span>,</span><br><span class="line">        <span class="attr">data</span>: user</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-
-
-<p>提交给后台</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">saveUser</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="comment">// alert(&quot;1234&quot;);</span></span><br><span class="line">  <span class="comment">/* 先触发表单验证 */</span></span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">$refs</span>.<span class="property">userFormRef</span>.<span class="title function_">validate</span>(<span class="function">(<span class="params">valid</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (valid) &#123;</span><br><span class="line">      <span class="comment">// 提交给后台</span></span><br><span class="line">      userApi.<span class="title function_">addUser</span>(<span class="variable language_">this</span>.<span class="property">userForm</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 成功提示</span></span><br><span class="line">        <span class="variable language_">this</span>.$message(&#123;</span><br><span class="line">          <span class="attr">message</span>: response.<span class="property">message</span>,</span><br><span class="line">          <span class="attr">type</span>: <span class="string">&quot;success&quot;</span>,</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="comment">// 关闭对话框</span></span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">dialogFormVisible</span> = <span class="literal">false</span>;</span><br><span class="line">        <span class="comment">// 刷新表格</span></span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">getUserList</span>();</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;error submit!!&quot;</span>);</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-<p>添加用户状态标签</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;el-table-column prop=&quot;status&quot; label=&quot;用户状态&quot; width=&quot;100&quot;&gt;</span><br><span class="line">  &lt;template slot-scope=&quot;scope&quot;&gt;</span><br><span class="line">    &lt;el-tag v-if=&quot;scope.row.status == 1&quot;&gt;正常&lt;/el-tag&gt;</span><br><span class="line">    &lt;el-tag v-else type=&quot;danger&quot;&gt;异常&lt;/el-tag&gt;</span><br><span class="line">  &lt;/template&gt;</span><br><span class="line">&lt;/el-table-column&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="七、密码加密"><a href="#七、密码加密" class="headerlink" title="七、密码加密"></a>七、密码加密</h1><h2 id="1、修改登录接口"><a href="#1、修改登录接口" class="headerlink" title="1、修改登录接口"></a>1、修改登录接口</h2><p>导入依赖<code>pom.xml</code></p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--Spring-Security--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.security<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-security-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>启动类配置<code>Bean</code></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="keyword">public</span> PasswordEncoder <span class="title function_">passwordEncoder</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">BCryptPasswordEncoder</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>注入对象<code>UserController</code></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Resource</span></span><br><span class="line"><span class="keyword">private</span> PasswordEncoder passwordEncoder;</span><br></pre></td></tr></table></figure>
-
-<p>加密处理</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@PostMapping</span></span><br><span class="line"><span class="keyword">public</span> Result&lt;?&gt; addUser(<span class="meta">@RequestBody</span> User user) &#123;</span><br><span class="line">    user.setPassword(passwordEncoder.encode(user.getPassword()));</span><br><span class="line">    userService.save(user);</span><br><span class="line">    <span class="keyword">return</span> Result.success(<span class="string">&quot;新增用户成功&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>注意：</p>
-<p>每次产生的密码都是随机生成的，我们需要对登录逻辑业务层方法进行处理</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 如果结果不为空，并且密码和传入的是匹配的，则生成token，将用户信息存入redis</span></span><br><span class="line"><span class="keyword">if</span> (loginUser != <span class="literal">null</span> &amp;&amp; passwordEncoder.matches(user.getPassword(), loginUser.getPassword())) &#123;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h1 id="八、用户修改"><a href="#八、用户修改" class="headerlink" title="八、用户修改"></a>八、用户修改</h1><h2 id="1、UserController-2"><a href="#1、UserController-2" class="headerlink" title="1、UserController"></a>1、UserController</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@PutMapping</span></span><br><span class="line"><span class="keyword">public</span> Result&lt;?&gt; updateUser(<span class="meta">@RequestBody</span> User user)&#123;</span><br><span class="line">    user.setPassword(<span class="literal">null</span>); <span class="comment">//密码不需要修改</span></span><br><span class="line">    userService.updateById(user);</span><br><span class="line">    <span class="keyword">return</span> Result.success(<span class="string">&quot;修改用户成功&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>修改用户需要再定义根据id查询用户信息接口</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping(&quot;&#123;id&#125;&quot;)</span></span><br><span class="line"><span class="keyword">public</span> Result&lt;User&gt; <span class="title function_">getUserById</span><span class="params">(<span class="meta">@PathVariable(&quot;id&quot;)</span> Integer id)</span>&#123;</span><br><span class="line">    <span class="type">User</span> <span class="variable">user</span> <span class="operator">=</span> userService.getById(id);</span><br><span class="line">    <span class="keyword">return</span> Result.success(user);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="2、增加修改和删除按钮"><a href="#2、增加修改和删除按钮" class="headerlink" title="2、增加修改和删除按钮"></a>2、增加修改和删除按钮</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template slot-scope=&quot;scope&quot;&gt;</span><br><span class="line">  &lt;el-button</span><br><span class="line">    @click=&quot;openEditUI(scope.row.id)&quot;</span><br><span class="line">    type=&quot;primary&quot;</span><br><span class="line">    icon=&quot;el-icon-edit&quot;</span><br><span class="line">    size=&quot;mini&quot;</span><br><span class="line">    circle</span><br><span class="line">  &gt;&lt;/el-button&gt;</span><br><span class="line">  &lt;el-button</span><br><span class="line">    @click=&quot;deleteUser(scope.row)&quot;</span><br><span class="line">    type=&quot;danger&quot;</span><br><span class="line">    icon=&quot;el-icon-delete&quot;</span><br><span class="line">    size=&quot;mini&quot;</span><br><span class="line">    circle</span><br><span class="line">  &gt;&lt;/el-button&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="3、对接"><a href="#3、对接" class="headerlink" title="3、对接"></a>3、对接</h2><blockquote>
-<p><code>src\api\userManage.js</code>&amp;#x20;</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">getUserById</span>(<span class="params">id</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">request</span>(&#123;</span><br><span class="line">        <span class="comment">// url: &#x27;/user/&#x27; + id,</span></span><br><span class="line">        <span class="attr">url</span>: <span class="string">`/user/<span class="subst">$&#123;id&#125;</span>`</span>,</span><br><span class="line">        <span class="attr">method</span>: <span class="string">&#x27;get&#x27;</span>,</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br><span class="line"></span><br><span class="line"><span class="title function_">updateUser</span>(<span class="params">user</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">request</span>(&#123;</span><br><span class="line">        <span class="attr">url</span>: <span class="string">&#x27;/user&#x27;</span>,</span><br><span class="line">        <span class="attr">method</span>: <span class="string">&#x27;put&#x27;</span>,</span><br><span class="line">        <span class="attr">data</span>: user</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-
-
-<blockquote>
-<p>复用openEditUI</p>
-<p>修改该方法</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">openEditUI</span>(<span class="params">id</span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (id == <span class="literal">null</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">title</span> = <span class="string">&quot;新增用户&quot;</span>;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">title</span> = <span class="string">&quot;修改用户&quot;</span>;</span><br><span class="line">    <span class="comment">// 根据id查询用户数据</span></span><br><span class="line">    userApi.<span class="title function_">getUserById</span>(id).<span class="title function_">then</span>(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">userForm</span> = response.<span class="property">data</span>;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<blockquote>
-<p>修改用户时不需要修改密码</p>
-<p>需要对编辑对话框做个判断</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;el-form-item</span><br><span class="line">  v-if=&quot;userForm.id == null || userForm.id == undefined&quot;</span><br><span class="line">  label=&quot;登录密码&quot;</span><br><span class="line">  prop=&quot;password&quot;</span><br><span class="line">  :label-width=&quot;formLabelWidth&quot;</span><br><span class="line">  &gt;&lt;i class=&quot;el-icon-key&quot;&gt;&lt;/i&gt;</span><br><span class="line">  &lt;el-input</span><br><span class="line">    type=&quot;password&quot;</span><br><span class="line">    v-model=&quot;userForm.password&quot;</span><br><span class="line">    autocomplete=&quot;off&quot;</span><br><span class="line">    show-password</span><br><span class="line">  &gt;&lt;/el-input&gt;</span><br><span class="line">&lt;/el-form-item&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-<blockquote>
-<p>添加保存用户方法<code>src\api\userManage.js</code></p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">saveUser</span>(<span class="params">user</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (user.<span class="property">id</span> == <span class="literal">null</span> &amp;&amp; user.<span class="property">id</span> == <span class="literal">undefined</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="title function_">addUser</span>(user);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="title function_">updateUser</span>(user);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>修改<code>user.vue</code>中saveUser方法</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">saveUser</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="comment">// alert(&quot;1234&quot;);</span></span><br><span class="line">  <span class="comment">/* 先触发表单验证 */</span></span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">$refs</span>.<span class="property">userFormRef</span>.<span class="title function_">validate</span>(<span class="function">(<span class="params">valid</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (valid) &#123;</span><br><span class="line">      <span class="comment">// 提交给后台</span></span><br><span class="line">      userApi.<span class="title function_">saveUser</span>(<span class="variable language_">this</span>.<span class="property">userForm</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 成功提示</span></span><br><span class="line">        <span class="variable language_">this</span>.$message(&#123;</span><br><span class="line">          <span class="attr">message</span>: response.<span class="property">message</span>,</span><br><span class="line">          <span class="attr">type</span>: <span class="string">&quot;success&quot;</span>,</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="comment">// 关闭对话框</span></span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">dialogFormVisible</span> = <span class="literal">false</span>;</span><br><span class="line">        <span class="comment">// 刷新表格</span></span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">getUserList</span>();</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;error submit!!&quot;</span>);</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h1 id="九、用户删除"><a href="#九、用户删除" class="headerlink" title="九、用户删除"></a>九、用户删除</h1><h2 id="1、UserController-3"><a href="#1、UserController-3" class="headerlink" title="1、UserController"></a>1、UserController</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@DeleteMapping(&quot;&#123;id&#125;&quot;)</span></span><br><span class="line"><span class="keyword">public</span> Result&lt;User&gt; <span class="title function_">deleteUserById</span><span class="params">(<span class="meta">@PathVariable(&quot;id&quot;)</span> Integer id)</span>&#123;</span><br><span class="line">    userService.removeById(id);</span><br><span class="line">    <span class="keyword">return</span> Result.success(<span class="string">&quot;删除用户成功&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="2、逻辑删除"><a href="#2、逻辑删除" class="headerlink" title="2、逻辑删除"></a>2、逻辑删除</h2><blockquote>
-<p><code>properties.yml</code></p>
-</blockquote>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">mybatis-plus:</span></span><br><span class="line">  <span class="attr">global-config:</span></span><br><span class="line">    <span class="attr">db-config:</span></span><br><span class="line">      <span class="attr">logic-delete-field:</span> <span class="string">deleted</span> <span class="comment"># 全局逻辑删除的实体字段名(since 3.3.0,配置后可以忽略不配置步骤2)</span></span><br><span class="line">      <span class="attr">logic-delete-value:</span> <span class="number">1</span> <span class="comment"># 逻辑已删除值(默认为 1)</span></span><br><span class="line">      <span class="attr">logic-not-delete-value:</span> <span class="number">0</span> <span class="comment"># 逻辑未删除值(默认为 0)</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="3、对接-1"><a href="#3、对接-1" class="headerlink" title="3、对接"></a>3、对接</h2><blockquote>
-<p>定义方法<code>src\api\userManage.js</code></p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">deleteUserById</span>(<span class="params">id</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">request</span>(&#123;</span><br><span class="line">        <span class="attr">url</span>: <span class="string">`/user/<span class="subst">$&#123;id&#125;</span>`</span>,</span><br><span class="line">        <span class="attr">method</span>: <span class="string">&#x27;delete&#x27;</span></span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><code>user.vue</code> 绑定按钮</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;el-button</span><br><span class="line">  @click=&quot;deleteUser(scope.row)&quot;</span><br><span class="line">  type=&quot;danger&quot;</span><br><span class="line">  icon=&quot;el-icon-delete&quot;</span><br><span class="line">  size=&quot;mini&quot;</span><br><span class="line">  circle</span><br><span class="line">&gt;&lt;/el-button&gt;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>定义<code>deleteUser</code>方法</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">deleteUser</span>(<span class="params">user</span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.$confirm(<span class="string">`你确认删除用户 <span class="subst">$&#123;user.username&#125;</span> ?`</span>, <span class="string">&quot;提示&quot;</span>, &#123;</span><br><span class="line">    <span class="attr">confirmButtonText</span>: <span class="string">&quot;确定&quot;</span>,</span><br><span class="line">    <span class="attr">cancelButtonText</span>: <span class="string">&quot;取消&quot;</span>,</span><br><span class="line">    <span class="attr">type</span>: <span class="string">&quot;warning&quot;</span>,</span><br><span class="line">  &#125;)</span><br><span class="line">    .<span class="title function_">then</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      userApi.<span class="title function_">deleteUserById</span>(user.<span class="property">id</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">this</span>.$message(&#123;</span><br><span class="line">          <span class="attr">type</span>: <span class="string">&quot;success&quot;</span>,</span><br><span class="line">          <span class="attr">message</span>: response.<span class="property">message</span>,</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">getUserList</span>();</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;)</span><br><span class="line">    .<span class="title function_">catch</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">this</span>.$message(&#123;</span><br><span class="line">        <span class="attr">type</span>: <span class="string">&quot;info&quot;</span>,</span><br><span class="line">        <span class="attr">message</span>: <span class="string">&quot;已取消删除&quot;</span>,</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>项目笔记</category>
-      </categories>
-      <tags>
-        <tag>后端</tag>
-        <tag>java</tag>
-        <tag>SpringBoot</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>我的第一篇博客</title>
     <url>/post/63785.html</url>
     <content><![CDATA[<h1 id="用户管理系统"><a href="#用户管理系统" class="headerlink" title="用户管理系统"></a>用户管理系统</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
@@ -810,8 +307,8 @@
       </categories>
       <tags>
         <tag>java</tag>
-        <tag>SpringBoot</tag>
         <tag>vue</tag>
+        <tag>SpringBoot</tag>
         <tag>Vue</tag>
         <tag>Element UI</tag>
       </tags>
@@ -3520,6 +3017,509 @@
       <tags>
         <tag>java</tag>
         <tag>路线</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用户管理系统后端</title>
+    <url>/post/29c5a7c0.html</url>
+    <content><![CDATA[<h1 id="用户管理系统后端"><a href="#用户管理系统后端" class="headerlink" title="用户管理系统后端"></a>用户管理系统后端</h1><hr>
+<h1 id="一、项目初始化"><a href="#一、项目初始化" class="headerlink" title="一、项目初始化"></a>一、项目初始化</h1><h2 id="1-1、创建项目"><a href="#1-1、创建项目" class="headerlink" title="1.1、创建项目"></a><strong>1.1、创建项目</strong></h2><blockquote>
+<p>创建SpringBoot项目</p>
+<p>版本：2.7.8</p>
+</blockquote>
+<h2 id="1-2、pom依赖"><a href="#1-2、pom依赖" class="headerlink" title="1.2、pom依赖"></a>1.2、<strong>pom依赖</strong></h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- web --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- mysql --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-j<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- mybatis-plus --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.baomidou<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-plus-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.5.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 代码生成器 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.baomidou<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-plus-generator<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.5.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- freemarker 一个用Java语言编写的模板引擎--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.freemarker<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>freemarker<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- lombok --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.projectlombok<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>lombok<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--redis--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-data-redis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="1-3、properties-yml"><a href="#1-3、properties-yml" class="headerlink" title="1.3、properties.yml"></a>1.3、<strong>properties.yml</strong></h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">80</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">&#x27;061313&#x27;</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:mysql:///xdb</span></span><br><span class="line"><span class="comment">#    driver-class-name: com.mysql.cj.jdbc.Driver</span></span><br><span class="line">  <span class="attr">redis:</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">6379</span></span><br><span class="line">    <span class="attr">host:</span> <span class="string">localhost</span></span><br><span class="line"><span class="attr">logging:</span></span><br><span class="line">  <span class="attr">level:</span></span><br><span class="line">    <span class="attr">com.cheng:</span> <span class="string">debug</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="二、MyBatis-Plus代码生成器"><a href="#二、MyBatis-Plus代码生成器" class="headerlink" title="二、MyBatis-Plus代码生成器"></a>二、MyBatis-Plus代码生成器</h1><h2 id="2-1、创建生成器"><a href="#2-1、创建生成器" class="headerlink" title="2.1、创建生成器"></a>2.1、创建生成器</h2><blockquote>
+<p>在<code>src/test/java/com/cheng/CodeGenerator.java</code>下创建代码生成器</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">url</span> <span class="operator">=</span> <span class="string">&quot;jdbc:mysql:///xdb&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">username</span> <span class="operator">=</span> <span class="string">&quot;root&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">password</span> <span class="operator">=</span> <span class="string">&quot;061313&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">author</span> <span class="operator">=</span> <span class="string">&quot;aaron&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">outputDir</span> <span class="operator">=</span> <span class="string">&quot;E:\\IdeaProjects\\workspace\\x-admin\\src\\main\\java&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">basePackage</span> <span class="operator">=</span> <span class="string">&quot;com.cheng&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">moduleName</span> <span class="operator">=</span> <span class="string">&quot;sys&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">mapperLocation</span> <span class="operator">=</span> <span class="string">&quot;E:\\IdeaProjects\\workspace\\x-admin\\src\\main\\resources\\mapper\\&quot;</span> + moduleName;</span><br><span class="line"><span class="type">String</span> <span class="variable">tableName</span> <span class="operator">=</span> <span class="string">&quot;x_user,x_menu,x_role,x_role_menu,x_user_role&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">tablePrefix</span> <span class="operator">=</span> <span class="string">&quot;x_&quot;</span>;</span><br><span class="line">FastAutoGenerator.create(url, username, password)</span><br><span class="line">        .globalConfig(builder -&gt; &#123;</span><br><span class="line">            builder.author(author) <span class="comment">// 设置作者</span></span><br><span class="line">                    .enableSwagger() <span class="comment">// 开启 swagger 模式</span></span><br><span class="line">                    <span class="comment">//.fileOverride() // 覆盖已生成文件</span></span><br><span class="line">                    .outputDir(outputDir); <span class="comment">// 指定输出目录</span></span><br><span class="line">        &#125;)</span><br><span class="line">        .packageConfig(builder -&gt; &#123;</span><br><span class="line">            builder.parent(basePackage) <span class="comment">// 设置父包名</span></span><br><span class="line">                    .moduleName(moduleName) <span class="comment">// 设置父包模块名</span></span><br><span class="line">                    .pathInfo(Collections.singletonMap(OutputFile.xml, mapperLocation)); <span class="comment">// 设置mapperXml生成路径</span></span><br><span class="line">        &#125;)</span><br><span class="line">        .strategyConfig(builder -&gt; &#123;</span><br><span class="line">            builder.addInclude(tableName) <span class="comment">// 设置需要生成的表名</span></span><br><span class="line">                    .addTablePrefix(tablePrefix); <span class="comment">// 设置过滤表前缀</span></span><br><span class="line">        &#125;)</span><br><span class="line">        .templateEngine(<span class="keyword">new</span> <span class="title class_">FreemarkerTemplateEngine</span>()) <span class="comment">// 使用Freemarker引擎模板，默认的是Velocity引擎模板</span></span><br><span class="line">        .execute();</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-2、启动类加注解"><a href="#2-2、启动类加注解" class="headerlink" title="2.2、启动类加注解"></a>2.2、<strong>启动类加注解</strong></h2><blockquote>
+<p>使用<code>@MapperScan</code>注解<code>mapper</code>下的类都不需要再加<code>@Mapper</code></p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@MapperScan(&quot;com.cheng.*.mapper&quot;)</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-3、测试"><a href="#3-3、测试" class="headerlink" title="3.3、测试"></a>3.3、测试</h2><ol>
+<li><strong>测试数据层</strong></li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">XAdminApplicationTests</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Resource</span></span><br><span class="line">    <span class="keyword">private</span> UserMapper userMapper;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">contextLoads</span><span class="params">()</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">getAll</span><span class="params">()</span> &#123;</span><br><span class="line">        List&lt;User&gt; users = userMapper.selectList(<span class="literal">null</span>);</span><br><span class="line">        users.forEach(System.out::println);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<ol>
+<li><strong>测试控制层</strong></li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/user&quot;)</span></span><br><span class="line"><span class="comment">//@CrossOrigin 解决跨域问题</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">UserController</span> &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意</strong></p>
+<ul>
+<li>这里需要使用@RestController因为需要返回的json数据</li>
+</ul>
+<p><strong>具体</strong>：<a href="https://www.wolai.com/pSVQdgwdnjTfJb2hQKNnMJ" title="https://www.wolai.com/pSVQdgwdnjTfJb2hQKNnMJ">https://www.wolai.com/pSVQdgwdnjTfJb2hQKNnMJ</a></p>
+<h1 id="三、公共相应类"><a href="#三、公共相应类" class="headerlink" title="三、公共相应类"></a>三、公共相应类</h1><blockquote>
+<p>为了给前端返回统一的格式，我们需要<strong>统一格式</strong></p>
+</blockquote>
+<h2 id="3-1、创建公共类"><a href="#3-1、创建公共类" class="headerlink" title="3.1、创建公共类"></a>3.1、创建公共类</h2><p>创建<code>com/cheng/common/vo/Result.java</code></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@AllArgsConstructor</span></span><br><span class="line"><span class="meta">@NoArgsConstructor</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Result</span> &lt;T&gt;&#123;</span><br><span class="line">    <span class="keyword">private</span> Integer code;</span><br><span class="line">    <span class="keyword">private</span> String message;</span><br><span class="line">    <span class="keyword">private</span> T data;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; Result&lt;T&gt; <span class="title function_">success</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Result</span>&lt;&gt;(<span class="number">20000</span>,<span class="string">&quot;success&quot;</span>,<span class="literal">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; Result&lt;T&gt; <span class="title function_">success</span><span class="params">(T data)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Result</span>&lt;&gt;(<span class="number">20000</span>,<span class="string">&quot;success&quot;</span>,data);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; Result&lt;T&gt; <span class="title function_">success</span><span class="params">(String message,T data)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Result</span>&lt;&gt;(<span class="number">20000</span>,message,data);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; Result&lt;T&gt; <span class="title function_">success</span><span class="params">(String message)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Result</span>&lt;&gt;(<span class="number">20000</span>,message,<span class="literal">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span>&lt;T&gt;  Result&lt;T&gt; <span class="title function_">fail</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Result</span>&lt;&gt;(<span class="number">20001</span>,<span class="string">&quot;fail&quot;</span>,<span class="literal">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span>&lt;T&gt;  Result&lt;T&gt; <span class="title function_">fail</span><span class="params">(Integer code)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Result</span>&lt;&gt;(code,<span class="string">&quot;fail&quot;</span>,<span class="literal">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span>&lt;T&gt;  Result&lt;T&gt; <span class="title function_">fail</span><span class="params">(Integer code, String message)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Result</span>&lt;&gt;(code,message,<span class="literal">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span>&lt;T&gt;  Result&lt;T&gt; <span class="title function_">fail</span><span class="params">( String message)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Result</span>&lt;&gt;(<span class="number">20001</span>,message,<span class="literal">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="四、登录相关接口"><a href="#四、登录相关接口" class="headerlink" title="四、登录相关接口"></a>四、登录相关接口</h1><h2 id="4-1、登录"><a href="#4-1、登录" class="headerlink" title="4.1、登录"></a>4.1、登录</h2><blockquote>
+<p>查看前端项目时，点击登陆时，打开F12查看发送了哪些请求</p>
+<p>这样就可以对这些请求进行编写</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>接口属性</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>url</td>
+<td>&#x2F;user&#x2F;login</td>
+</tr>
+<tr>
+<td>method</td>
+<td>post</td>
+</tr>
+<tr>
+<td>请求参数</td>
+<td>username  &amp;#xA;password</td>
+</tr>
+</tbody></table>
+<p>返回参数：</p>
+<ol>
+<li><code>code: 20000</code></li>
+<li><code>data: &#123;token: &quot;user:90d64b1d-8b35-4162-b2e6-a9a9af231f03&quot;&#125;</code></li>
+<li><code>token: &quot;user:90d64b1d-8b35-4162-b2e6-a9a9af231f03&quot;</code></li>
+<li><code>message: &quot;success&quot;</code></li>
+</ol>
+<h3 id="1-UserController"><a href="#1-UserController" class="headerlink" title="1.UserController"></a>1.<strong>UserController</strong></h3><blockquote>
+<p>在<code>UserController</code>类中编写login方法</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@PostMapping(&quot;/login&quot;)</span></span><br><span class="line"><span class="keyword">public</span> Result&lt;Map&lt;String,Object&gt;&gt; <span class="title function_">login</span><span class="params">(<span class="meta">@RequestBody</span> User user)</span>&#123;</span><br><span class="line">    Map&lt;String,Object&gt; data = userService.login(user);</span><br><span class="line">    <span class="keyword">if</span>(data != <span class="literal">null</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> Result.success(data);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> Result.fail(<span class="number">20002</span>,<span class="string">&quot;用户名或密码错误&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>知识点</strong></p>
+<ul>
+<li><a href="https://blog.csdn.net/justry_deng/article/details/80972817" title="@RequestBody的使用">@RequestBody的使用</a></li>
+</ul>
+<h3 id="2-UserServiceImpl"><a href="#2-UserServiceImpl" class="headerlink" title="2.UserServiceImpl"></a>2.<strong>UserServiceImpl</strong></h3><blockquote>
+<p>在<code>UserServiceImpl</code>编写登录逻辑</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> Map&lt;String, Object&gt; <span class="title function_">login</span><span class="params">(User user)</span> &#123;</span><br><span class="line"></span><br><span class="line">    LambdaQueryWrapper&lt;User&gt; lqw = <span class="keyword">new</span> <span class="title class_">LambdaQueryWrapper</span>&lt;&gt;();</span><br><span class="line">    <span class="comment">// 根据用户名和密码查询</span></span><br><span class="line">    lqw.eq(User::getUsername, user.getUsername());</span><br><span class="line">    lqw.eq(User::getPassword, user.getPassword());</span><br><span class="line">    <span class="type">User</span> <span class="variable">loginUser</span> <span class="operator">=</span> <span class="built_in">this</span>.baseMapper.selectOne(lqw);</span><br><span class="line">    <span class="comment">// 如果结果不为空，则生成token，将用户信息存入redis</span></span><br><span class="line">    <span class="keyword">if</span> (loginUser != <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">key</span> <span class="operator">=</span> <span class="string">&quot;user:&quot;</span> + UUID.randomUUID();</span><br><span class="line">        <span class="comment">// 存入redis</span></span><br><span class="line">        loginUser.setPassword(<span class="literal">null</span>);</span><br><span class="line">        redisTemplate.opsForValue().set(key,loginUser,<span class="number">30</span>, TimeUnit.HOURS);</span><br><span class="line">        Map&lt;String,Object&gt; data = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        data.put(<span class="string">&quot;token&quot;</span>,key);</span><br><span class="line">        <span class="keyword">return</span> data;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-整合Redis"><a href="#3-整合Redis" class="headerlink" title="3.整合Redis"></a>3.<strong>整合Redis</strong></h3><ol>
+<li><strong>pom</strong></li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- redis --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-data-redis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<ol>
+<li><strong>yml</strong></li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">redis:</span></span><br><span class="line">    <span class="attr">host:</span> <span class="string">localhost</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">6379</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>3.<strong>配置类</strong></p>
+<blockquote>
+<p>创建config包下MyRedisConfig配置类</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MyRedisConfig</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Resource</span></span><br><span class="line">    <span class="keyword">private</span> RedisConnectionFactory factory;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> RedisTemplate&lt;String,Object&gt; <span class="title function_">redisTemplate</span><span class="params">()</span> &#123;</span><br><span class="line">        RedisTemplate&lt;String, Object&gt; redisTemplate = <span class="keyword">new</span> <span class="title class_">RedisTemplate</span>&lt;&gt;();</span><br><span class="line">        redisTemplate.setConnectionFactory(factory);</span><br><span class="line">        redisTemplate.setKeySerializer(<span class="keyword">new</span> <span class="title class_">StringRedisSerializer</span>());</span><br><span class="line"></span><br><span class="line">        Jackson2JsonRedisSerializer&lt;Object&gt; serializer = <span class="keyword">new</span> <span class="title class_">Jackson2JsonRedisSerializer</span>&lt;&gt;(Object.class);</span><br><span class="line">        redisTemplate.setValueSerializer(serializer);</span><br><span class="line"></span><br><span class="line">        <span class="type">ObjectMapper</span> <span class="variable">om</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ObjectMapper</span>();</span><br><span class="line">        om.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);</span><br><span class="line">        om.setDateFormat(<span class="keyword">new</span> <span class="title class_">SimpleDateFormat</span>(<span class="string">&quot;yyyy-MM-dd HH:mm:ss&quot;</span>));</span><br><span class="line">        om.setTimeZone(TimeZone.getDefault());</span><br><span class="line">        om.configure(MapperFeature.USE_ANNOTATIONS, <span class="literal">false</span>);</span><br><span class="line">        om.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, <span class="literal">false</span>);</span><br><span class="line">        om.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, <span class="literal">false</span>);</span><br><span class="line">        om.activateDefaultTyping(LaissezFaireSubTypeValidator.instance, ObjectMapper.DefaultTyping.NON_FINAL, JsonTypeInfo.As.PROPERTY);</span><br><span class="line">        om.setSerializationInclusion(JsonInclude.Include.NON_NULL);</span><br><span class="line">        serializer.setObjectMapper(om);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> redisTemplate;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 存入redis</span></span><br><span class="line">loginUser.setPassword(<span class="literal">null</span>);</span><br><span class="line">redisTemplate.opsForValue().set(key,loginUser,<span class="number">30</span>, TimeUnit.HOURS);</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="4-2、获取用户信息"><a href="#4-2、获取用户信息" class="headerlink" title="4.2、获取用户信息"></a>4.2、获取用户信息</h2><table>
+<thead>
+<tr>
+<th>接口属性</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>url</td>
+<td>&#x2F;user&#x2F;info?token&#x3D;xxx</td>
+</tr>
+<tr>
+<td>method</td>
+<td>get</td>
+</tr>
+<tr>
+<td>请求参数</td>
+<td>token</td>
+</tr>
+</tbody></table>
+<p>返回参数：</p>
+<ol>
+<li><code>code: 20000</code></li>
+<li><code>data: &#123;token: &quot;user:2528455e-da46-4e9b-a789-fbcdfcad3e8d&quot;&#125;</code></li>
+<li><code>token: &quot;user:2528455e-da46-4e9b-a789-fbcdfcad3e8d&quot;</code></li>
+<li><code>message: &quot;success&quot;</code></li>
+</ol>
+<h3 id="1-UserController-1"><a href="#1-UserController-1" class="headerlink" title="1.UserController"></a>1.UserController</h3><blockquote>
+<p>获取<code>user</code>对象需要反序列化</p>
+</blockquote>
+<p>在<code>pom.xml</code>中引入依赖</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--fastjson--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba.fastjson2<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>fastjson2<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.0.25<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>UserController</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping(&quot;/info&quot;)</span></span><br><span class="line"><span class="keyword">public</span> Result&lt;?&gt; getUserInfo(<span class="meta">@Param(&quot;token&quot;)</span> String token)&#123;</span><br><span class="line">    Map&lt;String,Object&gt; data = userService.getUserInfo(token);</span><br><span class="line">    <span class="keyword">if</span>(data != <span class="literal">null</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> Result.success(data);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> Result.fail(<span class="number">20003</span>,<span class="string">&quot;用户信息获取失败&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-UserServiceImpl-1"><a href="#2-UserServiceImpl-1" class="headerlink" title="2.UserServiceImpl"></a>2.<strong>UserServiceImpl</strong></h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> Map&lt;String, Object&gt; <span class="title function_">getUserInfo</span><span class="params">(String token)</span> &#123;</span><br><span class="line">    <span class="comment">// 从redis查询token</span></span><br><span class="line">    <span class="type">Object</span> <span class="variable">obj</span> <span class="operator">=</span> redisTemplate.opsForValue().get(token);</span><br><span class="line">    <span class="comment">// 反序列化</span></span><br><span class="line">    <span class="type">User</span> <span class="variable">user</span> <span class="operator">=</span> JSON.parseObject(JSON.toJSONString(obj),User.class);</span><br><span class="line">    <span class="keyword">if</span>(user != <span class="literal">null</span>)&#123;</span><br><span class="line">        Map&lt;String, Object&gt; data =  <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        data.put(<span class="string">&quot;name&quot;</span>,user.getUsername());</span><br><span class="line">        data.put(<span class="string">&quot;avatar&quot;</span>,user.getAvatar());</span><br><span class="line">        List&lt;String&gt; roleList = <span class="built_in">this</span>.getBaseMapper().getRoleNamesByUserId(user.getId());</span><br><span class="line">        data.put(<span class="string">&quot;roles&quot;</span>, roleList);</span><br><span class="line">        <span class="keyword">return</span> data;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-UserMapper-xml"><a href="#3-UserMapper-xml" class="headerlink" title="3.UserMapper.xml"></a>3.UserMapper.xml</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;getRoleNamesByUserId&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;Integer&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;String&quot;</span>&gt;</span></span><br><span class="line">    SELECT</span><br><span class="line">    b.role_name</span><br><span class="line">    FROM x_user_role a,x_role b</span><br><span class="line">    WHERE a.`user_id` = #&#123;userId&#125;</span><br><span class="line">    AND a.`role_id` = b.`role_id`</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="4-UserMapper-java"><a href="#4-UserMapper-java" class="headerlink" title="4.UserMapper.java"></a>4.UserMapper.java</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">UserMapper</span> <span class="keyword">extends</span> <span class="title class_">BaseMapper</span>&lt;User&gt; &#123;</span><br><span class="line">    </span><br><span class="line">    List&lt;String&gt; <span class="title function_">getRoleNamesByUserId</span><span class="params">(Integer userId)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="4-3、注销"><a href="#4-3、注销" class="headerlink" title="4.3、注销"></a>4.3、注销</h2><table>
+<thead>
+<tr>
+<th>接口属性</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>url</td>
+<td>&#x2F;user&#x2F;logout</td>
+</tr>
+<tr>
+<td>method</td>
+<td>post</td>
+</tr>
+</tbody></table>
+<h3 id="1-UserController-2"><a href="#1-UserController-2" class="headerlink" title="1.UserController"></a>1.UserController</h3><blockquote>
+<p>X-Token 是从请求头里传过来的</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@PostMapping(&quot;/logout&quot;)</span></span><br><span class="line"><span class="keyword">public</span> Result&lt;?&gt; logout(<span class="meta">@RequestHeader(&quot;X-Token&quot;)</span> String token) &#123;</span><br><span class="line">    userService.logout(token);</span><br><span class="line">    <span class="keyword">return</span> Result.success();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-UserServiceIpml"><a href="#2-UserServiceIpml" class="headerlink" title="2.UserServiceIpml"></a>2.UserServiceIpml</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">logout</span><span class="params">(String token)</span> &#123;</span><br><span class="line">    redisTemplate.delete(token);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="五、用户列表查询接口"><a href="#五、用户列表查询接口" class="headerlink" title="五、用户列表查询接口"></a>五、用户列表查询接口</h1><h2 id="1、UserController"><a href="#1、UserController" class="headerlink" title="1、UserController"></a>1、UserController</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping(&quot;/list&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> Result&lt;Map&lt;String,Object&gt;&gt; <span class="title function_">getUserList</span><span class="params">(<span class="meta">@RequestParam(value = &quot;username&quot;,required = false)</span> String username,</span></span><br><span class="line"><span class="params">                                                  <span class="meta">@RequestParam(value = &quot;phone&quot;,required = false)</span> String phone,</span></span><br><span class="line"><span class="params">                                                  <span class="meta">@RequestParam(&quot;pageNo&quot;)</span> Long pageNO,</span></span><br><span class="line"><span class="params">                                                  <span class="meta">@RequestParam(&quot;pageSize&quot;)</span> Long pageSize)</span> &#123;</span><br><span class="line">        LambdaQueryWrapper&lt;User&gt; lqw  = <span class="keyword">new</span> <span class="title class_">LambdaQueryWrapper</span>&lt;&gt;();</span><br><span class="line">        lqw.likeRight(StringUtils.hasLength(username),User::getUsername,username);</span><br><span class="line">        lqw.likeRight(StringUtils.hasLength(phone),User::getPhone,phone);</span><br><span class="line">        <span class="comment">// 按用户id降序排序</span></span><br><span class="line"><span class="comment">//        lqw.orderByDesc(User::getId);</span></span><br><span class="line">        Page&lt;User&gt; page = <span class="keyword">new</span> <span class="title class_">Page</span>&lt;&gt;(pageNO,pageSize);</span><br><span class="line">        userService.page(page,lqw);</span><br><span class="line"></span><br><span class="line">        Map&lt;String ,Object&gt; data = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        data.put(<span class="string">&quot;total&quot;</span>,page.getTotal());</span><br><span class="line">        data.put(<span class="string">&quot;rows&quot;</span>,page.getRecords());</span><br><span class="line">        <span class="keyword">return</span> Result.success(data);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>注意：</strong></p>
+<ul>
+<li>用分页查询时需要若没有配置分页拦截器则查不到total的总记录数</li>
+</ul>
+<p><strong>解决</strong></p>
+<ul>
+<li>创建<code>MybatisPlusInterceptor</code></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MPConfig</span> &#123;</span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> MybatisPlusInterceptor <span class="title function_">mybatisPlusInterceptor</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="type">MybatisPlusInterceptor</span> <span class="variable">interceptor</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">MybatisPlusInterceptor</span>();</span><br><span class="line">        interceptor.addInnerInterceptor(<span class="keyword">new</span> <span class="title class_">PaginationInnerInterceptor</span>(DbType.MYSQL));</span><br><span class="line">        <span class="keyword">return</span> interceptor;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2、用户列表前端对接"><a href="#2、用户列表前端对接" class="headerlink" title="2、用户列表前端对接"></a>2、用户列表前端对接</h2><blockquote>
+<p><code>src\api\userManager.js</code>中每个方法对应一个后端接口</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="title function_">getUserList</span>(<span class="params">searchModel</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="title function_">request</span>(&#123;</span><br><span class="line">          <span class="attr">url</span>: <span class="string">&#x27;/user/list&#x27;</span>,</span><br><span class="line">          <span class="attr">method</span>: <span class="string">&#x27;get&#x27;</span>,</span><br><span class="line">          <span class="attr">params</span>: &#123;</span><br><span class="line">              <span class="attr">pageNo</span>: searchModel.<span class="property">pageNo</span>,</span><br><span class="line">              <span class="attr">pageSize</span>: searchModel.<span class="property">pageSize</span>,</span><br><span class="line">              <span class="attr">username</span>: searchModel.<span class="property">username</span>,</span><br><span class="line">              <span class="attr">phone</span>: searchModel.<span class="property">phone</span></span><br><span class="line">          &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p><code>src\views\sys\user.vue</code>中调用上述方法，具体如下</p>
+</blockquote>
+<p>调用前需要导入<code>import userApi from &quot;@/api/userManage&quot;;</code></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">import</span> userApi <span class="keyword">from</span> <span class="string">&quot;@/api/userManage&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">getUserList</span>(<span class="params"></span>) &#123;</span><br><span class="line">    userApi.<span class="title function_">getUserList</span>(<span class="variable language_">this</span>.<span class="property">searchModel</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">userList</span> = response.<span class="property">data</span>.<span class="property">rows</span>;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">total</span> = response.<span class="property">data</span>.<span class="property">total</span>;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>注意</strong></p>
+<p>但是需要上述方法调用才会执行，这样登录进去就可以看到数据</p>
+<p>所有需要让页面加载时就做一次查询</p>
+<p>此时我们需要用到钩子函数</p>
+<p>methods中定义方法</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">created</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="title function_">getUserList</span>();</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+
+
+<p>实现条件查询，需要为查询按钮绑定函数</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;el-button</span><br><span class="line">@click=&quot;getUserList&quot;</span><br><span class="line">type=&quot;primary&quot;</span><br><span class="line">icon=&quot;el-icon-search&quot;</span><br><span class="line">round</span><br><span class="line">&gt;查询&lt;/el-button&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>实现分页查询按5、10条数据展示</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">handleSizeChange</span>(<span class="params">pageSize</span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">searchModel</span>.<span class="property">pageSize</span> = pageSize;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="title function_">getUserList</span>();</span><br><span class="line">&#125;,</span><br><span class="line"><span class="title function_">handleCurrentChange</span>(<span class="params">pageNo</span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">searchModel</span>.<span class="property">pageNo</span> = pageNo;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="title function_">getUserList</span>();</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+
+
+<p>由于分页查询出来的数据每次都是从1开始的，需要通过计算显示该条数据的正确序号</p>
+<p>在查询列表里计算</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template slot-scope=&quot;scope&quot;&gt;</span><br><span class="line">  &#123;&#123;</span><br><span class="line">    (searchModel.pageNo - 1) * searchModel.pageSize + scope.$index + 1</span><br><span class="line">  &#125;&#125;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>一键删除输入框的内容</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;el-input</span><br><span class="line">  v-model=&quot;searchModel.username&quot;</span><br><span class="line">  placeholder=&quot;用户名&quot;</span><br><span class="line">  clearable</span><br><span class="line">&gt;&lt;/el-input&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="六、新增用户接口"><a href="#六、新增用户接口" class="headerlink" title="六、新增用户接口"></a>六、新增用户接口</h1><h2 id="1、UserController-1"><a href="#1、UserController-1" class="headerlink" title="1、UserController"></a>1、UserController</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@PostMapping</span></span><br><span class="line"><span class="keyword">public</span> Result&lt;?&gt; addUser(<span class="meta">@RequestBody</span> User user) &#123;</span><br><span class="line">    user.setPassword(passwordEncoder.encode(user.getPassword()));</span><br><span class="line">    userService.save(user);</span><br><span class="line">    <span class="keyword">return</span> Result.success(<span class="string">&quot;新增用户成功&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2、设计前端新增界面"><a href="#2、设计前端新增界面" class="headerlink" title="2、设计前端新增界面"></a>2、设计前端新增界面</h2><blockquote>
+<p>使用对话框组件</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;el-dialog title=&quot;收货地址&quot; :visible.sync=&quot;dialogFormVisible&quot;&gt;</span><br><span class="line">  &lt;el-form :model=&quot;form&quot;&gt;</span><br><span class="line">    &lt;el-form-item label=&quot;活动名称&quot; :label-width=&quot;formLabelWidth&quot;&gt;</span><br><span class="line">      &lt;el-input v-model=&quot;form.name&quot; autocomplete=&quot;off&quot;&gt;&lt;/el-input&gt;</span><br><span class="line">    &lt;/el-form-item&gt;</span><br><span class="line">    &lt;el-form-item label=&quot;活动区域&quot; :label-width=&quot;formLabelWidth&quot;&gt;</span><br><span class="line">      &lt;el-select v-model=&quot;form.region&quot; placeholder=&quot;请选择活动区域&quot;&gt;</span><br><span class="line">        &lt;el-option label=&quot;区域一&quot; value=&quot;shanghai&quot;&gt;&lt;/el-option&gt;</span><br><span class="line">        &lt;el-option label=&quot;区域二&quot; value=&quot;beijing&quot;&gt;&lt;/el-option&gt;</span><br><span class="line">      &lt;/el-select&gt;</span><br><span class="line">    &lt;/el-form-item&gt;</span><br><span class="line">  &lt;/el-form&gt;</span><br><span class="line">  &lt;div slot=&quot;footer&quot; class=&quot;dialog-footer&quot;&gt;</span><br><span class="line">    &lt;el-button @click=&quot;dialogFormVisible = false&quot;&gt;取 消&lt;/el-button&gt;</span><br><span class="line">    &lt;el-button type=&quot;primary&quot; @click=&quot;dialogFormVisible = false&quot;&gt;确 定&lt;/el-button&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/el-dialog&gt;</span><br></pre></td></tr></table></figure>
+
+<p>复用<code>title</code>，因为后面修改用户需要在掉一次该对话框</p>
+<p>使用 <code>:title</code>绑定&amp;#x20;</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;el-dialog</span><br><span class="line">      @close=&quot;clearForm&quot;</span><br><span class="line">      :title=&quot;title&quot;</span><br><span class="line">      :visible.sync=&quot;dialogFormVisible&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>同样需要在scrip下data中定义title</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">title</span>: <span class="string">&quot;&quot;</span>,</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>修改需要绑定的属性</strong></p>
+<ul>
+<li><code>v-model</code></li>
+</ul>
+<p><strong>定义数据</strong></p>
+<ul>
+<li><code>label-width</code> :指的时下面的宽度</li>
+</ul>
+<p><img src="/image/laybel-width_uxbls2I7kf.png"></p>
+<p><strong>为新增按钮绑定单击事件</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;el-col :span=&quot;4&quot; align=&quot;right&quot;&gt;</span><br><span class="line">  &lt;el-button</span><br><span class="line">    @click=&quot;openEditUI(null)&quot;</span><br><span class="line">    type=&quot;primary&quot;</span><br><span class="line">    icon=&quot;el-icon-plus&quot;</span><br><span class="line">    circle</span><br><span class="line">  &gt;&lt;/el-button&gt;</span><br><span class="line">&lt;/el-col&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>定义<code>openEditUI</code> 方法</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">openEditUI</span>(<span class="params">id</span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">title</span> = <span class="string">&#x27;新增用户&#x27;</span>,</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">dialogFormVisible</span> = <span class="literal">true</span>;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>问题</strong></p>
+<p>当我们点开新增按钮并填写了用户信息时之后，关闭对话框</p>
+<p>下次重新打开，会发现上一次输入的数据还在上面</p>
+<p><strong>解决</strong></p>
+<blockquote>
+<p>对话框组件提供了一个关闭(close)事件</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!-- 用户信息编辑对话框 --&gt;</span><br><span class="line">&lt;el-dialog</span><br><span class="line">  @close=&quot;clearForm&quot;</span><br><span class="line">  :title=&quot;title&quot;</span><br><span class="line">  :visible.sync=&quot;dialogFormVisible&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>定义<code>clearlForm</code>方法</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">clearForm</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">userForm</span> = &#123;&#125;;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">$refs</span>.<span class="property">userFormRef</span>.<span class="title function_">clearValidate</span>();</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3、表单验证"><a href="#3、表单验证" class="headerlink" title="3、表单验证"></a>3、表单验证</h2><blockquote>
+<p>Form 组件提供了表单验证的功能，只需要通过 <code>rules</code> 属性传入约定的验证规则</p>
+<p>并将 Form-Item 的 <code>prop</code> 属性设置为需校验的字段名即可。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;el-form :model=&quot;userForm&quot; ref=&quot;userFormRef&quot; :rules=&quot;rules&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">rules</span>: &#123;</span><br><span class="line">  <span class="attr">username</span>: [</span><br><span class="line">    &#123; <span class="attr">required</span>: <span class="literal">true</span>, <span class="attr">message</span>: <span class="string">&quot;请输入用户名&quot;</span>, <span class="attr">trigger</span>: <span class="string">&quot;blur&quot;</span> &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">min</span>: <span class="number">3</span>,</span><br><span class="line">      <span class="attr">max</span>: <span class="number">20</span>,</span><br><span class="line">      <span class="attr">message</span>: <span class="string">&quot;长度在 3 到 20 个字符&quot;</span>,</span><br><span class="line">      <span class="attr">trigger</span>: <span class="string">&quot;blur&quot;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">password</span>: [</span><br><span class="line">    &#123; <span class="attr">required</span>: <span class="literal">true</span>, <span class="attr">message</span>: <span class="string">&quot;密码不能为空&quot;</span>, <span class="attr">trigger</span>: <span class="string">&quot;blur&quot;</span> &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">min</span>: <span class="number">6</span>,</span><br><span class="line">      <span class="attr">max</span>: <span class="number">20</span>,</span><br><span class="line">      <span class="attr">message</span>: <span class="string">&quot;长度在 6 到 16 个字符&quot;</span>,</span><br><span class="line">      <span class="attr">trigger</span>: <span class="string">&quot;blur&quot;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">phone</span>: [</span><br><span class="line">    &#123; <span class="attr">required</span>: <span class="literal">true</span>, <span class="attr">message</span>: <span class="string">&quot;请输入手机号码&quot;</span>, <span class="attr">trigger</span>: <span class="string">&quot;blur&quot;</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">validator</span>: checkPhone, <span class="attr">trigger</span>: <span class="string">&quot;blur&quot;</span> &#125;,</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">email</span>: [</span><br><span class="line">    &#123; <span class="attr">required</span>: <span class="literal">true</span>, <span class="attr">message</span>: <span class="string">&quot;请输入电子邮件&quot;</span>, <span class="attr">trigger</span>: <span class="string">&quot;blur&quot;</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">validator</span>: checkEmail, <span class="attr">trigger</span>: <span class="string">&quot;blur&quot;</span> &#125;,</span><br><span class="line">  ],</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p><code>required: true</code> :表示必填项</p>
+<p><code>trigger: &quot;blur&quot;</code> : 表示失去焦点时触发&amp;#x20;</p>
+<p><strong>使用表单验证需要加</strong>**<code>prop</code>**<strong>属性</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!-- 用户名 --&gt;</span><br><span class="line">&lt;el-form-item</span><br><span class="line">  label=&quot;用户名&quot;</span><br><span class="line">  prop=&quot;username&quot;</span><br><span class="line">  :label-width=&quot;formLabelWidth&quot;</span><br><span class="line">  &gt;&lt;i class=&quot;el-icon-user-solid&quot;&gt;&lt;/i&gt;</span><br><span class="line">  &lt;el-input v-model=&quot;userForm.username&quot; autocomplete=&quot;off&quot;&gt;&lt;/el-input&gt;</span><br><span class="line">&lt;/el-form-item&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>自定义校验规则</strong></p>
+<p>在<code>data</code>中定义函数</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">data</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> <span class="title function_">checkEmail</span> = (<span class="params">rule, value, callback</span>) =&gt; &#123;</span><br><span class="line">      <span class="keyword">var</span> reg = <span class="regexp">/^([a-zA-Z\d][\w-]&#123;2,&#125;)@(\w&#123;2,&#125;)\.([a-z]&#123;2,&#125;)(\.[a-z]&#123;2,&#125;)?$/</span>;</span><br><span class="line">      <span class="keyword">if</span> (!reg.<span class="title function_">test</span>(value)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="title function_">callback</span>(<span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&quot;邮箱格式错误&quot;</span>));</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="title function_">callback</span>();</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">var</span> <span class="title function_">checkPhone</span> = (<span class="params">rule, value, callback</span>) =&gt; &#123;</span><br><span class="line">      <span class="keyword">let</span> reg = <span class="regexp">/^1[3|4|5|7|8][0-9]&#123;9&#125;$/</span>;</span><br><span class="line">      <span class="keyword">if</span> (!reg.<span class="title function_">test</span>(value)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="title function_">callback</span>(<span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&quot;号码格式错误&quot;</span>));</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="title function_">callback</span>();</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure>
+
+<p>调用</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">phone</span>: [</span><br><span class="line">  &#123; <span class="attr">required</span>: <span class="literal">true</span>, <span class="attr">message</span>: <span class="string">&quot;请输入手机号码&quot;</span>, <span class="attr">trigger</span>: <span class="string">&quot;blur&quot;</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">validator</span>: checkPhone, <span class="attr">trigger</span>: <span class="string">&quot;blur&quot;</span> &#125;,</span><br><span class="line">],</span><br><span class="line"><span class="attr">email</span>: [</span><br><span class="line">  &#123; <span class="attr">required</span>: <span class="literal">true</span>, <span class="attr">message</span>: <span class="string">&quot;请输入电子邮件&quot;</span>, <span class="attr">trigger</span>: <span class="string">&quot;blur&quot;</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">validator</span>: checkEmail, <span class="attr">trigger</span>: <span class="string">&quot;blur&quot;</span> &#125;,</span><br><span class="line">],</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>小问题</strong></p>
+<blockquote>
+<p>上一次验证的提示信息在下一次打开时未消失</p>
+<p>需要清理校验结果</p>
+</blockquote>
+<p><strong>处理过程</strong></p>
+<blockquote>
+<p>定义<code>ref</code>具体如下</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;!-- 用户信息编辑对话框 --&gt;</span><br><span class="line">&lt;el-dialog</span><br><span class="line">  @close=&quot;clearForm&quot;</span><br><span class="line">  :title=&quot;title&quot;</span><br><span class="line">  :visible.sync=&quot;dialogFormVisible&quot;</span><br><span class="line">&gt;</span><br><span class="line">  &lt;el-form :model=&quot;userForm&quot; ref=&quot;userFormRef&quot; :rules=&quot;rules&quot;&gt;</span><br><span class="line">    &lt;!-- 用户名 --&gt;</span><br><span class="line">    &lt;el-form-item</span><br><span class="line">      label=&quot;用户名&quot;</span><br><span class="line">      prop=&quot;username&quot;</span><br><span class="line">      :label-width=&quot;formLabelWidth&quot;</span><br><span class="line">      &gt;&lt;i class=&quot;el-icon-user-solid&quot;&gt;&lt;/i&gt;</span><br><span class="line">      &lt;el-input v-model=&quot;userForm.username&quot; autocomplete=&quot;off&quot;&gt;&lt;/el-input&gt;</span><br><span class="line">    &lt;/el-form-item&gt;</span><br></pre></td></tr></table></figure>
+
+<p>clearForm方法中</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">clearForm</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">userForm</span> = &#123;&#125;;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">$refs</span>.<span class="property">userFormRef</span>.<span class="title function_">clearValidate</span>();</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>点确定按钮也需要进行表单校验</strong></p>
+<blockquote>
+<p>为确定按钮添加保存用户的单击事件</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;el-button type=&quot;primary&quot; @click=&quot;saveUser&quot;&gt;确 定&lt;/el-button&gt;</span><br></pre></td></tr></table></figure>
+
+<p>实现<code>saveUser</code>方法</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">saveUser</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="comment">// alert(&quot;1234&quot;);</span></span><br><span class="line">  <span class="comment">/* 先触发表单验证 */</span></span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">$refs</span>.<span class="property">userFormRef</span>.<span class="title function_">validate</span>(<span class="function">(<span class="params">valid</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (valid) &#123;</span><br><span class="line">      <span class="comment">// 提交给后台</span></span><br><span class="line">      userApi.<span class="title function_">saveUser</span>(<span class="variable language_">this</span>.<span class="property">userForm</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 成功提示</span></span><br><span class="line">        <span class="variable language_">this</span>.$message(&#123;</span><br><span class="line">          <span class="attr">message</span>: response.<span class="property">message</span>,</span><br><span class="line">          <span class="attr">type</span>: <span class="string">&quot;success&quot;</span>,</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="comment">// 关闭对话框</span></span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">dialogFormVisible</span> = <span class="literal">false</span>;</span><br><span class="line">        <span class="comment">// 刷新表格</span></span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">getUserList</span>();</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;error submit!!&quot;</span>);</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="4、表单提交"><a href="#4、表单提交" class="headerlink" title="4、表单提交"></a>4、表单提交</h2><p><strong>前后端对接</strong></p>
+<p><strong>后端</strong></p>
+<blockquote>
+<p>后端新增用户已实现</p>
+</blockquote>
+<p><strong>前端</strong></p>
+<blockquote>
+<p><code>src\api\userManage.js</code>下创建交互方法</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">addUser</span>(<span class="params">user</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">request</span>(&#123;</span><br><span class="line">        <span class="attr">url</span>: <span class="string">&#x27;/user&#x27;</span>,</span><br><span class="line">        <span class="attr">method</span>: <span class="string">&#x27;post&#x27;</span>,</span><br><span class="line">        <span class="attr">data</span>: user</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+
+
+<p>提交给后台</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">saveUser</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="comment">// alert(&quot;1234&quot;);</span></span><br><span class="line">  <span class="comment">/* 先触发表单验证 */</span></span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">$refs</span>.<span class="property">userFormRef</span>.<span class="title function_">validate</span>(<span class="function">(<span class="params">valid</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (valid) &#123;</span><br><span class="line">      <span class="comment">// 提交给后台</span></span><br><span class="line">      userApi.<span class="title function_">addUser</span>(<span class="variable language_">this</span>.<span class="property">userForm</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 成功提示</span></span><br><span class="line">        <span class="variable language_">this</span>.$message(&#123;</span><br><span class="line">          <span class="attr">message</span>: response.<span class="property">message</span>,</span><br><span class="line">          <span class="attr">type</span>: <span class="string">&quot;success&quot;</span>,</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="comment">// 关闭对话框</span></span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">dialogFormVisible</span> = <span class="literal">false</span>;</span><br><span class="line">        <span class="comment">// 刷新表格</span></span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">getUserList</span>();</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;error submit!!&quot;</span>);</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>添加用户状态标签</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;el-table-column prop=&quot;status&quot; label=&quot;用户状态&quot; width=&quot;100&quot;&gt;</span><br><span class="line">  &lt;template slot-scope=&quot;scope&quot;&gt;</span><br><span class="line">    &lt;el-tag v-if=&quot;scope.row.status == 1&quot;&gt;正常&lt;/el-tag&gt;</span><br><span class="line">    &lt;el-tag v-else type=&quot;danger&quot;&gt;异常&lt;/el-tag&gt;</span><br><span class="line">  &lt;/template&gt;</span><br><span class="line">&lt;/el-table-column&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="七、密码加密"><a href="#七、密码加密" class="headerlink" title="七、密码加密"></a>七、密码加密</h1><h2 id="1、修改登录接口"><a href="#1、修改登录接口" class="headerlink" title="1、修改登录接口"></a>1、修改登录接口</h2><p>导入依赖<code>pom.xml</code></p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--Spring-Security--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.security<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-security-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>启动类配置<code>Bean</code></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="keyword">public</span> PasswordEncoder <span class="title function_">passwordEncoder</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">BCryptPasswordEncoder</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注入对象<code>UserController</code></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Resource</span></span><br><span class="line"><span class="keyword">private</span> PasswordEncoder passwordEncoder;</span><br></pre></td></tr></table></figure>
+
+<p>加密处理</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@PostMapping</span></span><br><span class="line"><span class="keyword">public</span> Result&lt;?&gt; addUser(<span class="meta">@RequestBody</span> User user) &#123;</span><br><span class="line">    user.setPassword(passwordEncoder.encode(user.getPassword()));</span><br><span class="line">    userService.save(user);</span><br><span class="line">    <span class="keyword">return</span> Result.success(<span class="string">&quot;新增用户成功&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>注意：</p>
+<p>每次产生的密码都是随机生成的，我们需要对登录逻辑业务层方法进行处理</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 如果结果不为空，并且密码和传入的是匹配的，则生成token，将用户信息存入redis</span></span><br><span class="line"><span class="keyword">if</span> (loginUser != <span class="literal">null</span> &amp;&amp; passwordEncoder.matches(user.getPassword(), loginUser.getPassword())) &#123;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h1 id="八、用户修改"><a href="#八、用户修改" class="headerlink" title="八、用户修改"></a>八、用户修改</h1><h2 id="1、UserController-2"><a href="#1、UserController-2" class="headerlink" title="1、UserController"></a>1、UserController</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@PutMapping</span></span><br><span class="line"><span class="keyword">public</span> Result&lt;?&gt; updateUser(<span class="meta">@RequestBody</span> User user)&#123;</span><br><span class="line">    user.setPassword(<span class="literal">null</span>); <span class="comment">//密码不需要修改</span></span><br><span class="line">    userService.updateById(user);</span><br><span class="line">    <span class="keyword">return</span> Result.success(<span class="string">&quot;修改用户成功&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>修改用户需要再定义根据id查询用户信息接口</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping(&quot;&#123;id&#125;&quot;)</span></span><br><span class="line"><span class="keyword">public</span> Result&lt;User&gt; <span class="title function_">getUserById</span><span class="params">(<span class="meta">@PathVariable(&quot;id&quot;)</span> Integer id)</span>&#123;</span><br><span class="line">    <span class="type">User</span> <span class="variable">user</span> <span class="operator">=</span> userService.getById(id);</span><br><span class="line">    <span class="keyword">return</span> Result.success(user);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="2、增加修改和删除按钮"><a href="#2、增加修改和删除按钮" class="headerlink" title="2、增加修改和删除按钮"></a>2、增加修改和删除按钮</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template slot-scope=&quot;scope&quot;&gt;</span><br><span class="line">  &lt;el-button</span><br><span class="line">    @click=&quot;openEditUI(scope.row.id)&quot;</span><br><span class="line">    type=&quot;primary&quot;</span><br><span class="line">    icon=&quot;el-icon-edit&quot;</span><br><span class="line">    size=&quot;mini&quot;</span><br><span class="line">    circle</span><br><span class="line">  &gt;&lt;/el-button&gt;</span><br><span class="line">  &lt;el-button</span><br><span class="line">    @click=&quot;deleteUser(scope.row)&quot;</span><br><span class="line">    type=&quot;danger&quot;</span><br><span class="line">    icon=&quot;el-icon-delete&quot;</span><br><span class="line">    size=&quot;mini&quot;</span><br><span class="line">    circle</span><br><span class="line">  &gt;&lt;/el-button&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3、对接"><a href="#3、对接" class="headerlink" title="3、对接"></a>3、对接</h2><blockquote>
+<p><code>src\api\userManage.js</code>&amp;#x20;</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">getUserById</span>(<span class="params">id</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">request</span>(&#123;</span><br><span class="line">        <span class="comment">// url: &#x27;/user/&#x27; + id,</span></span><br><span class="line">        <span class="attr">url</span>: <span class="string">`/user/<span class="subst">$&#123;id&#125;</span>`</span>,</span><br><span class="line">        <span class="attr">method</span>: <span class="string">&#x27;get&#x27;</span>,</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br><span class="line"></span><br><span class="line"><span class="title function_">updateUser</span>(<span class="params">user</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">request</span>(&#123;</span><br><span class="line">        <span class="attr">url</span>: <span class="string">&#x27;/user&#x27;</span>,</span><br><span class="line">        <span class="attr">method</span>: <span class="string">&#x27;put&#x27;</span>,</span><br><span class="line">        <span class="attr">data</span>: user</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>复用openEditUI</p>
+<p>修改该方法</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">openEditUI</span>(<span class="params">id</span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (id == <span class="literal">null</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">title</span> = <span class="string">&quot;新增用户&quot;</span>;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">title</span> = <span class="string">&quot;修改用户&quot;</span>;</span><br><span class="line">    <span class="comment">// 根据id查询用户数据</span></span><br><span class="line">    userApi.<span class="title function_">getUserById</span>(id).<span class="title function_">then</span>(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">userForm</span> = response.<span class="property">data</span>;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>修改用户时不需要修改密码</p>
+<p>需要对编辑对话框做个判断</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;el-form-item</span><br><span class="line">  v-if=&quot;userForm.id == null || userForm.id == undefined&quot;</span><br><span class="line">  label=&quot;登录密码&quot;</span><br><span class="line">  prop=&quot;password&quot;</span><br><span class="line">  :label-width=&quot;formLabelWidth&quot;</span><br><span class="line">  &gt;&lt;i class=&quot;el-icon-key&quot;&gt;&lt;/i&gt;</span><br><span class="line">  &lt;el-input</span><br><span class="line">    type=&quot;password&quot;</span><br><span class="line">    v-model=&quot;userForm.password&quot;</span><br><span class="line">    autocomplete=&quot;off&quot;</span><br><span class="line">    show-password</span><br><span class="line">  &gt;&lt;/el-input&gt;</span><br><span class="line">&lt;/el-form-item&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>添加保存用户方法<code>src\api\userManage.js</code></p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">saveUser</span>(<span class="params">user</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (user.<span class="property">id</span> == <span class="literal">null</span> &amp;&amp; user.<span class="property">id</span> == <span class="literal">undefined</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="title function_">addUser</span>(user);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="title function_">updateUser</span>(user);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>修改<code>user.vue</code>中saveUser方法</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">saveUser</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="comment">// alert(&quot;1234&quot;);</span></span><br><span class="line">  <span class="comment">/* 先触发表单验证 */</span></span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">$refs</span>.<span class="property">userFormRef</span>.<span class="title function_">validate</span>(<span class="function">(<span class="params">valid</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (valid) &#123;</span><br><span class="line">      <span class="comment">// 提交给后台</span></span><br><span class="line">      userApi.<span class="title function_">saveUser</span>(<span class="variable language_">this</span>.<span class="property">userForm</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 成功提示</span></span><br><span class="line">        <span class="variable language_">this</span>.$message(&#123;</span><br><span class="line">          <span class="attr">message</span>: response.<span class="property">message</span>,</span><br><span class="line">          <span class="attr">type</span>: <span class="string">&quot;success&quot;</span>,</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="comment">// 关闭对话框</span></span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">dialogFormVisible</span> = <span class="literal">false</span>;</span><br><span class="line">        <span class="comment">// 刷新表格</span></span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">getUserList</span>();</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;error submit!!&quot;</span>);</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="九、用户删除"><a href="#九、用户删除" class="headerlink" title="九、用户删除"></a>九、用户删除</h1><h2 id="1、UserController-3"><a href="#1、UserController-3" class="headerlink" title="1、UserController"></a>1、UserController</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@DeleteMapping(&quot;&#123;id&#125;&quot;)</span></span><br><span class="line"><span class="keyword">public</span> Result&lt;User&gt; <span class="title function_">deleteUserById</span><span class="params">(<span class="meta">@PathVariable(&quot;id&quot;)</span> Integer id)</span>&#123;</span><br><span class="line">    userService.removeById(id);</span><br><span class="line">    <span class="keyword">return</span> Result.success(<span class="string">&quot;删除用户成功&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2、逻辑删除"><a href="#2、逻辑删除" class="headerlink" title="2、逻辑删除"></a>2、逻辑删除</h2><blockquote>
+<p><code>properties.yml</code></p>
+</blockquote>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">mybatis-plus:</span></span><br><span class="line">  <span class="attr">global-config:</span></span><br><span class="line">    <span class="attr">db-config:</span></span><br><span class="line">      <span class="attr">logic-delete-field:</span> <span class="string">deleted</span> <span class="comment"># 全局逻辑删除的实体字段名(since 3.3.0,配置后可以忽略不配置步骤2)</span></span><br><span class="line">      <span class="attr">logic-delete-value:</span> <span class="number">1</span> <span class="comment"># 逻辑已删除值(默认为 1)</span></span><br><span class="line">      <span class="attr">logic-not-delete-value:</span> <span class="number">0</span> <span class="comment"># 逻辑未删除值(默认为 0)</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3、对接-1"><a href="#3、对接-1" class="headerlink" title="3、对接"></a>3、对接</h2><blockquote>
+<p>定义方法<code>src\api\userManage.js</code></p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">deleteUserById</span>(<span class="params">id</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">request</span>(&#123;</span><br><span class="line">        <span class="attr">url</span>: <span class="string">`/user/<span class="subst">$&#123;id&#125;</span>`</span>,</span><br><span class="line">        <span class="attr">method</span>: <span class="string">&#x27;delete&#x27;</span></span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>user.vue</code> 绑定按钮</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;el-button</span><br><span class="line">  @click=&quot;deleteUser(scope.row)&quot;</span><br><span class="line">  type=&quot;danger&quot;</span><br><span class="line">  icon=&quot;el-icon-delete&quot;</span><br><span class="line">  size=&quot;mini&quot;</span><br><span class="line">  circle</span><br><span class="line">&gt;&lt;/el-button&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>定义<code>deleteUser</code>方法</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">deleteUser</span>(<span class="params">user</span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.$confirm(<span class="string">`你确认删除用户 <span class="subst">$&#123;user.username&#125;</span> ?`</span>, <span class="string">&quot;提示&quot;</span>, &#123;</span><br><span class="line">    <span class="attr">confirmButtonText</span>: <span class="string">&quot;确定&quot;</span>,</span><br><span class="line">    <span class="attr">cancelButtonText</span>: <span class="string">&quot;取消&quot;</span>,</span><br><span class="line">    <span class="attr">type</span>: <span class="string">&quot;warning&quot;</span>,</span><br><span class="line">  &#125;)</span><br><span class="line">    .<span class="title function_">then</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      userApi.<span class="title function_">deleteUserById</span>(user.<span class="property">id</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">this</span>.$message(&#123;</span><br><span class="line">          <span class="attr">type</span>: <span class="string">&quot;success&quot;</span>,</span><br><span class="line">          <span class="attr">message</span>: response.<span class="property">message</span>,</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">getUserList</span>();</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;)</span><br><span class="line">    .<span class="title function_">catch</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">this</span>.$message(&#123;</span><br><span class="line">        <span class="attr">type</span>: <span class="string">&quot;info&quot;</span>,</span><br><span class="line">        <span class="attr">message</span>: <span class="string">&quot;已取消删除&quot;</span>,</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>项目笔记</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>SpringBoot</tag>
+        <tag>后端</tag>
       </tags>
   </entry>
 </search>
