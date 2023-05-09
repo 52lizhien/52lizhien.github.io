@@ -4,7 +4,7 @@
     <title>java基础</title>
     <url>/post/b4562165.html</url>
     <content><![CDATA[<h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><hr>
-<h2 id="day01"><a href="#day01" class="headerlink" title="day01"></a>day01</h2><h3 id="一、变量"><a href="#一、变量" class="headerlink" title="一、变量"></a>一、变量</h3><ol>
+<h1 id="day01"><a href="#day01" class="headerlink" title="day01"></a>day01</h1><h2 id="一、变量"><a href="#一、变量" class="headerlink" title="一、变量"></a>一、变量</h2><ol>
 <li><p>什么是变量 就是内存中的一个存储空间，相当于一个代词 </p>
 </li>
 <li><p>变量的作用 让代码变得简洁，复用性好。 </p>
@@ -41,7 +41,7 @@
 
 
 
-<h3 id="二、运算符"><a href="#二、运算符" class="headerlink" title="二、运算符"></a>二、运算符</h3><ul>
+<h2 id="二、运算符"><a href="#二、运算符" class="headerlink" title="二、运算符"></a>二、运算符</h2><ul>
 <li>java中的运算符（运算符：运算一定会有结果） <ul>
 <li>1.算术运算符   + - * &#x2F; %(取模) ++（自增） –（自减） </li>
 <li>2.赋值运算符   &#x3D; +&#x3D;…. </li>
@@ -56,7 +56,7 @@
 
 
 
-<h3 id="三、循环"><a href="#三、循环" class="headerlink" title="三、循环"></a>三、循环</h3><ul>
+<h2 id="三、循环"><a href="#三、循环" class="headerlink" title="三、循环"></a>三、循环</h2><ul>
 <li>循环结构： <ul>
 <li>1.定义：在java编程里面，需要反复执行某段代码的时候，就要用循环 </li>
 <li>2.为什么要有循环结构:简化代码 </li>
@@ -74,14 +74,14 @@
 
 
 
-<h3 id="四、嵌套循环"><a href="#四、嵌套循环" class="headerlink" title="四、嵌套循环"></a>四、嵌套循环</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo04</span>嵌套循环 &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 嵌套循环：</span></span><br><span class="line"><span class="comment">     *    就是循环中还有循环,循环的循环体还是循环</span></span><br><span class="line"><span class="comment">     *  1*1=1</span></span><br><span class="line"><span class="comment">     *  1*2=1 2*2=4</span></span><br><span class="line"><span class="comment">     *  1*3=3 2*3=6 3*3=9</span></span><br><span class="line"><span class="comment">     *  ...........</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     *  *=</span></span><br><span class="line"><span class="comment">     *  *= *=</span></span><br><span class="line"><span class="comment">     *  ***</span></span><br><span class="line"><span class="comment">     *  ****</span></span><br><span class="line"><span class="comment">     *  *****</span></span><br><span class="line"><span class="comment">     *  诀窍：</span></span><br><span class="line"><span class="comment">     *      1.分清楚什么是行，什么列</span></span><br><span class="line"><span class="comment">     *      2.外层循环，控制行数，内层循环控制列数</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> args</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">            <span class="comment">//外层循环  控制行数</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;<span class="number">10</span>;i++)&#123;</span><br><span class="line">                <span class="comment">//内层循环  控制列数</span></span><br><span class="line">                <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;i+<span class="number">1</span>;j++)&#123;</span><br><span class="line">                    <span class="comment">//内层循环控制列数所以打印星星的代码要写在内层循环</span></span><br><span class="line">                    <span class="comment">//\t表示制表符  相当于一个tab键   4个空格</span></span><br><span class="line">                    System.out.print(j+<span class="string">&quot;*&quot;</span>+i+<span class="string">&quot;=&quot;</span>+i*j+<span class="string">&quot;\t&quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                System.out.println();<span class="comment">//空的输出语句作用：就是换行</span></span><br><span class="line">            &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="四、嵌套循环"><a href="#四、嵌套循环" class="headerlink" title="四、嵌套循环"></a>四、嵌套循环</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo04</span>嵌套循环 &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 嵌套循环：</span></span><br><span class="line"><span class="comment">     *    就是循环中还有循环,循环的循环体还是循环</span></span><br><span class="line"><span class="comment">     *  1*1=1</span></span><br><span class="line"><span class="comment">     *  1*2=1 2*2=4</span></span><br><span class="line"><span class="comment">     *  1*3=3 2*3=6 3*3=9</span></span><br><span class="line"><span class="comment">     *  ...........</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     *  *=</span></span><br><span class="line"><span class="comment">     *  *= *=</span></span><br><span class="line"><span class="comment">     *  ***</span></span><br><span class="line"><span class="comment">     *  ****</span></span><br><span class="line"><span class="comment">     *  *****</span></span><br><span class="line"><span class="comment">     *  诀窍：</span></span><br><span class="line"><span class="comment">     *      1.分清楚什么是行，什么列</span></span><br><span class="line"><span class="comment">     *      2.外层循环，控制行数，内层循环控制列数</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> args</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">            <span class="comment">//外层循环  控制行数</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;<span class="number">10</span>;i++)&#123;</span><br><span class="line">                <span class="comment">//内层循环  控制列数</span></span><br><span class="line">                <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;i+<span class="number">1</span>;j++)&#123;</span><br><span class="line">                    <span class="comment">//内层循环控制列数所以打印星星的代码要写在内层循环</span></span><br><span class="line">                    <span class="comment">//\t表示制表符  相当于一个tab键   4个空格</span></span><br><span class="line">                    System.out.print(j+<span class="string">&quot;*&quot;</span>+i+<span class="string">&quot;=&quot;</span>+i*j+<span class="string">&quot;\t&quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                System.out.println();<span class="comment">//空的输出语句作用：就是换行</span></span><br><span class="line">            &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="五、冒泡排序"><a href="#五、冒泡排序" class="headerlink" title="五、冒泡排序"></a>五、冒泡排序</h3><p><img src="/../pic/1.jpg"></p>
+<h2 id="五、冒泡排序"><a href="#五、冒泡排序" class="headerlink" title="五、冒泡排序"></a>五、冒泡排序</h2><p><img src="/../pic/1.jpg"></p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo05</span>冒泡排序 &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 冒泡排序：</span></span><br><span class="line"><span class="comment">     *      1.相邻的两个元素比较，左边比右边的大就互换位置</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> args</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">//整型数组</span></span><br><span class="line">        <span class="type">int</span>[] arr = &#123;<span class="number">2</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">        System.out.println(<span class="string">&quot;排序前：&quot;</span>+Arrays.toString(arr));</span><br><span class="line">        <span class="comment">//外层循环控制行数</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;arr.length-<span class="number">1</span>;i++)&#123;</span><br><span class="line">            <span class="comment">//内层循环控制列数</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;arr.length-<span class="number">1</span>-i;j++)&#123;</span><br><span class="line">                <span class="comment">//编写对比替换逻辑</span></span><br><span class="line">                <span class="comment">//如果左边的元素比右边的元素大</span></span><br><span class="line">                <span class="keyword">if</span>(arr[j]&gt;arr[j+<span class="number">1</span>])&#123;</span><br><span class="line">                    <span class="comment">//就互换位置</span></span><br><span class="line">                    <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> arr[j];</span><br><span class="line">                    arr[j] = arr[j+<span class="number">1</span>];</span><br><span class="line">                    arr[j+<span class="number">1</span>] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        Arrays.sort(arr);</span><br><span class="line">        <span class="comment">//打印数组的API</span></span><br><span class="line">        System.out.println(<span class="string">&quot;排序后：&quot;</span>+Arrays.toString(arr));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="六、方法"><a href="#六、方法" class="headerlink" title="六、方法"></a>六、方法</h3><ul>
+<h2 id="六、方法"><a href="#六、方法" class="headerlink" title="六、方法"></a>六、方法</h2><ul>
 <li><p>方法 </p>
 <ul>
 <li><p>1.什么是方法 还有一种叫法：功能，函数一个意思，其实就是完成特定功能的代码块 举例：手机是一个工具，这个工具有很多功能，打电话，发短信，上网，照相。。。 为什么手机可以打电话，是因为里面有一系列的流程，其实就是一些代码，能够让我们的硬件去工作 </p>
@@ -140,7 +140,7 @@
 </ul>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> day01;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo06</span>方法 &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> args</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">10</span>,b = <span class="number">20</span>;</span><br><span class="line">            <span class="comment">//a是实际参数，因为代码走到这里，a里面已经有值了</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> sum(a,b);</span><br><span class="line">        System.out.println(sum);</span><br><span class="line">        <span class="type">int</span>[] arr = &#123;<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">6</span>,<span class="number">5</span>&#125;;</span><br><span class="line">        sort(arr);</span><br><span class="line">        <span class="comment">//[1, 2, 3, 4, 5, 6]</span></span><br><span class="line">        System.out.println(Arrays.toString(arr));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">   <span class="comment">/*</span></span><br><span class="line"><span class="comment">   需求：1.编写一个属于自己的冒泡排序方法？？？</span></span><br><span class="line"><span class="comment">   思考：如何写一个方法来完成我们的需求？？？</span></span><br><span class="line"><span class="comment">            *      1.明确返回值类型（考虑这个方法有没有返回值）</span></span><br><span class="line"><span class="comment">            *      2.明确参数列表（考虑这个方法有几个需要参与运算的数）*/</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">sort</span><span class="params">(<span class="type">int</span>[] arr)</span>&#123;</span><br><span class="line">        <span class="comment">//写排序的逻辑</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;arr.length-<span class="number">1</span>;i++)&#123;</span><br><span class="line">            <span class="comment">//内层循环控制列数</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;arr.length-<span class="number">1</span>-i;j++)&#123;</span><br><span class="line">                <span class="comment">//编写对比替换逻辑</span></span><br><span class="line">                <span class="comment">//如果左边的元素比右边的元素大</span></span><br><span class="line">                <span class="keyword">if</span>(arr[j]&gt;arr[j+<span class="number">1</span>])&#123;</span><br><span class="line">                    <span class="comment">//就互换位置</span></span><br><span class="line">                    <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> arr[j];</span><br><span class="line">                    arr[j] = arr[j+<span class="number">1</span>];</span><br><span class="line">                    arr[j+<span class="number">1</span>] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> a</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> b</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">sum</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span>&#123;<span class="comment">//a是形参，因为a里面的值是不确定</span></span><br><span class="line">        <span class="keyword">return</span> a+b;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h3 id="七、方法重载"><a href="#七、方法重载" class="headerlink" title="七、方法重载"></a>七、方法重载</h3><ul>
+<h2 id="七、方法重载"><a href="#七、方法重载" class="headerlink" title="七、方法重载"></a>七、方法重载</h2><ul>
 <li>方法重载（<code>overload</code>）:方法名相同，参数列表不同，与返回值类型无关 <ul>
 <li>注意：参数的顺序不同也算重载，但是实际生产这么写没有意义 什么时候用重载，就是你如果有一套逻辑是相同，但是参数不同，然后你又懒得起一个新的名字，就用重载</li>
 </ul>
@@ -148,7 +148,7 @@
 </ul>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo07</span>方法重载 &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 求2个数的和</span></span><br><span class="line"><span class="comment">         * 求3个数的和</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">sum</span><span class="params">(<span class="type">int</span> a,<span class="type">double</span> b)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (<span class="type">int</span>) (a+b);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">sum</span><span class="params">(<span class="type">int</span> a,<span class="type">double</span> b,<span class="type">int</span> c)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (<span class="type">int</span>) (a+b+c);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="八、面向对象"><a href="#八、面向对象" class="headerlink" title="八、面向对象"></a>八、面向对象</h3><ul>
+<h2 id="八、面向对象"><a href="#八、面向对象" class="headerlink" title="八、面向对象"></a>八、面向对象</h2><ul>
 <li><p>面向过程：c语言 </p>
 <ul>
 <li>强调的是过程：也就是第一步做什么，第二步做什么。。。</li>
@@ -213,6 +213,208 @@
 </ul>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo08</span>面向对象 &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 测试类测试方法</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> args</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 创建一个学生对象</span></span><br><span class="line"><span class="comment">         *   类名 对象名 = new 类名();</span></span><br><span class="line"><span class="comment">         * 如何使用里面的成员变量，成员方法</span></span><br><span class="line"><span class="comment">         * 对象名.变量名</span></span><br><span class="line"><span class="comment">         * 对象名.方法名</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="type">Student</span> <span class="variable">stu</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>();</span><br><span class="line">        stu.name = <span class="string">&quot;Andy&quot;</span>;</span><br><span class="line">        System.out.println(stu.name);</span><br><span class="line">        stu.study();</span><br><span class="line">        <span class="comment">//以上就是创建了学生对象，并使用它来帮助我们存储数据，以及输出功能</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 定义一个手机类，要有属性和行为。。。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 一个.java源文件中，可以有多个class，但是public修饰的只能有一个</span></span><br><span class="line"><span class="comment"> *学生类  封装...  方法的封装，还有类的封装</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *  成员变量</span></span><br><span class="line"><span class="comment">     *  姓名，年龄，性别</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    String name;</span><br><span class="line">    <span class="type">int</span> age;</span><br><span class="line">    String gender;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 成员方法</span></span><br><span class="line"><span class="comment">     * 学习、睡觉</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">study</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;学习...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">sleep</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;睡觉...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+
+
+<h1 id="day02"><a href="#day02" class="headerlink" title="day02"></a>day02</h1><h2 id="1-封装"><a href="#1-封装" class="headerlink" title="1.封装"></a>1.封装</h2><ul>
+<li><p>封装： </p>
+<ul>
+<li>1.概述 隐藏对象的属性和行为（实现逻辑的细节）,仅仅只提供对外公共访问的方式。Arrays.sort(); </li>
+<li>2.好处 <ul>
+<li>1.复用，提高代码的简洁性 </li>
+<li>2.作出了属性和行为逻辑的隐藏，只提供对外的公共访问方式。 </li>
+<li>3.提高安全性</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>3.封装的原则 将不需要对外提供的内容都隐藏起来 把属性隐藏，提供公共方法对外开放访问操作权限</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo01</span>封装 &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">Demo</span>().method();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 输出100句helloWorld</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Demo</span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 输出100句helloWorld</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">method</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">100</span>; i++) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;HelloWorld&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-private关键字"><a href="#2-private关键字" class="headerlink" title="2.private关键字"></a>2.private关键字</h2><ul>
+<li>private:私有 public公共 <ul>
+<li>1.是一个权限修饰符 </li>
+<li>2.可以修饰成员变量，成员方法 </li>
+<li>3.被其修饰的成员只能在本类中访问 </li>
+<li>4.一般private修饰的成员变量搭配setget方法去用 </li>
+<li>5.private是封装的一种体现形式，不能说封装就是私</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo02private</span>关键字 &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Hero</span> <span class="variable">hero</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Hero</span>();</span><br><span class="line">       <span class="comment">// hero.name = &quot;鸡你太美&quot;;</span></span><br><span class="line">        hero.setName(<span class="string">&quot;鸡你太美&quot;</span>);</span><br><span class="line">        System.out.println(hero.getName());</span><br><span class="line">        <span class="comment">//reflect 反射  暴力反射，就是可以直接获取到private修饰的成员  spring框架就是通过反射实现</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 英雄类</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Hero</span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 被其修饰的成员只能在本类中访问,</span></span><br><span class="line"><span class="comment">     * 提供set get 方法对外提供访问权限</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="comment">//存</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setName</span><span class="params">(String name)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="string">&quot;鸡你太美&quot;</span>.equals(name))&#123;</span><br><span class="line">            <span class="comment">//this表示本类对象,作用就是用来区分成员变量和局部变量重名的问题</span></span><br><span class="line">            <span class="built_in">this</span>.name=<span class="string">&quot;*****&quot;</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="built_in">this</span>.name = name;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//取</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-继承"><a href="#3-继承" class="headerlink" title="3.继承"></a>3.继承</h2><blockquote>
+<p>面向对象的3大特征：封装、 继承 、多态</p>
+</blockquote>
+<ul>
+<li><p>继承： </p>
+</li>
+<li><p>1.概念 </p>
+<ul>
+<li>让类和类之间产生父子关系，同时子类可以拥有父类所有非私有属性和行为（方法）</li>
+</ul>
+</li>
+<li><p>2.好处 </p>
+<ul>
+<li>简化代码，同时让类和类之间产生了联系，是多态的前提</li>
+</ul>
+</li>
+<li><p>3.弊端 </p>
+<ul>
+<li>代码和代码的耦合度增加了</li>
+</ul>
+</li>
+<li><p>4.语法 </p>
+<ul>
+<li>子类 <code>extends</code> 父类</li>
+</ul>
+</li>
+<li><p>5.注意事项 </p>
+<ul>
+<li>1.java不允许多继承 </li>
+<li>2.继承是由传递性的 <code>java</code>顶级父类是<code>object </code></li>
+<li>3.java中所有类（<code>class</code>）都是要么直接继承<code>object</code>，要么间接继承<code>object</code></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo03</span>继承 &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">TDog</span> <span class="variable">t</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">TDog</span>();</span><br><span class="line">        t.eat();</span><br><span class="line">        t.sleep();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 父类 动物类</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Animal</span>&#123;</span><br><span class="line">    String color;</span><br><span class="line">    <span class="type">int</span> leg;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">eat</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;吃饭&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">sleep</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;睡觉&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 子类 狗类</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Dog</span> <span class="keyword">extends</span> <span class="title class_">Animal</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">kanjia</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;狗会看家&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 子类 舔狗</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">TDog</span> <span class="keyword">extends</span> <span class="title class_">Dog</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">T</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;一无所有&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li><p>1.java不允许多继承 </p>
+</li>
+<li><p>2.继承是由传递性的 java顶级父类是object </p>
+</li>
+<li><p>3.java中所有类（class）都是要么直接继承object，要么间接继承object </p>
+</li>
+<li><p>4.子类不能继承父类的构造方法,但是可以通过super()去访问父类构造方法 </p>
+</li>
+<li><p>5.子类中所有的构造方法，默认都会访问父类的无参构造？ </p>
+<ul>
+<li>为什么？ <ul>
+<li>因为子类会继承父类中的数据，可能还会使用父类中的数据, 所以子类在初始化之前，一定要先将父类进行初始化</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>6.思考：如果父类中，没有无参构造怎么解决调用的问题？也就是说子类应该怎么办？ </p>
+<ul>
+<li>1.super解决 </li>
+<li>2.this解决</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-方法重写"><a href="#4-方法重写" class="headerlink" title="4.方法重写"></a>4.方法重写</h2><ul>
+<li><p>方法重写（掌握） </p>
+<ul>
+<li><p>1.什么是方法重写 </p>
+<ul>
+<li>重写：子类父类出现一模一样的方法（注意：返回值类型可以是子父类，学完面向对象讲）</li>
+</ul>
+</li>
+<li><p>2.方法重写的应用 </p>
+<ul>
+<li>当子类除了需要父类的功能，又需要子类自己独有的新功能时，就可以用方法重写 </li>
+<li>这样既沿袭了父类的功能，又有子类特有的功能</li>
+</ul>
+</li>
+<li><p>3.重写的注意事项： </p>
+<ul>
+<li>1.父类中私有方法不可以被重写 </li>
+<li>2.子类重写父类方法时，访问权限不能比父类方法低（最好一致） </li>
+<li>3.子类重写方法方法的时候，最好声明一模一样</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo04</span>方法重写 &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">ChatGPT4</span> <span class="variable">chatGPT4</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ChatGPT4</span>();</span><br><span class="line">        chatGPT4.method();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * chatgpt3</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ChatGPT3</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">method</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;识别文字&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ChatGPT4</span> <span class="keyword">extends</span> <span class="title class_">ChatGPT3</span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *     对父类继承过来的方法逻辑进行修改，迭代</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">method</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="comment">//super 表示父类引用 可以直接调用父类的method方法</span></span><br><span class="line">        <span class="built_in">super</span>.method();</span><br><span class="line">        System.out.println(<span class="string">&quot;识别图片&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-多态"><a href="#5-多态" class="headerlink" title="5.多态"></a>5.多态</h2><p><img src="/../pic/2.jpg"></p>
+<p><img src="/../pic/3.jpg"></p>
+<ul>
+<li><p>多态：（事物存在的多种形态，水 固态叫冰，气态叫水蒸气）</p>
+</li>
+<li><p>java中多态： </p>
+</li>
+<li><p>多态的前提： </p>
+<ul>
+<li>1.要有继承关系 </li>
+<li>2.要有方法重写 </li>
+<li>3.要有向上造型（父类引用指向子类对象）</li>
+</ul>
+</li>
+<li><p>多态中： </p>
+<ul>
+<li>成员变量编译看左边，运行看左边 </li>
+<li>成员方法编译看左边，运行看右边 </li>
+<li>静态方法编译看编译看左边，运行看左边 </li>
+<li>但是静态方法是隶属本类的，不能被继承，所以谈不上重写</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo05</span>多态 &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 测试类</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> args</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">//3.要有向上造型（父类引用指向子类对象）</span></span><br><span class="line">        <span class="comment">//父类引用指向子类对象  翻译成你能理解的中文：Tom是一只猫</span></span><br><span class="line">        <span class="type">Cat</span> <span class="variable">cat</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Tom</span>();</span><br><span class="line">        <span class="comment">//成员变量编译看=左边，运行看=左边</span></span><br><span class="line">        System.out.println(cat.legs);</span><br><span class="line">        cat.eat();</span><br><span class="line">        <span class="comment">//相当于是Cat.sleep();</span></span><br><span class="line">        cat.sleep();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 实际开发多态一般把父类引用作为形式参数写在方法中接收子类对象</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> cat</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">method</span><span class="params">(Cat cat)</span>&#123;<span class="comment">//Cat cat = new Tom()  动态加载</span></span><br><span class="line">        cat.eat();<span class="comment">//Tom吃Jerry  调用的是子类的成员方法</span></span><br><span class="line">        <span class="comment">//2    调用的是父类的成员变量</span></span><br><span class="line">        System.out.println(cat.legs);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 父类 猫类</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Cat</span>&#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">legs</span> <span class="operator">=</span> <span class="number">4</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">eat</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;猫吃饭......&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">sleep</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;猫睡觉&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 子类 Tom</span></span><br><span class="line"><span class="comment"> * 1.要有继承关系</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Tom</span> <span class="keyword">extends</span> <span class="title class_">Cat</span>&#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">legs</span> <span class="operator">=</span> <span class="number">2</span>;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *  2.要有方法重写</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">   <span class="comment">/* public void eat()&#123;</span></span><br><span class="line"><span class="comment">        System.out.println(&quot;Tom吃Jerry......&quot;);</span></span><br><span class="line"><span class="comment">    &#125;*/</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">sleep</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Tom睡觉&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 子类 多来A梦</span></span><br><span class="line"><span class="comment"> * 1.要有继承关系</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">class 多来A梦 <span class="keyword">extends</span> <span class="title class_">Cat</span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *  2.要有方法重写</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="comment">/*public void eat()&#123;</span></span><br><span class="line"><span class="comment">        System.out.println(&quot;多来A梦吃铜锣烧......&quot;);</span></span><br><span class="line"><span class="comment">    &#125;*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="注意事项-1"><a href="#注意事项-1" class="headerlink" title="注意事项"></a>注意事项</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo06</span>多态的注意事项 &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">       <span class="comment">/* //向上造型：父类引用指向子类对象</span></span><br><span class="line"><span class="comment">        Tank tank = new ZhuBaJie();</span></span><br><span class="line"><span class="comment">        tank.pingA();</span></span><br><span class="line"><span class="comment">        //多态的弊端：不可以直接调用子类独有的方法</span></span><br><span class="line"><span class="comment">        //tank.圈养时刻();</span></span><br><span class="line"><span class="comment">        //向下造型:把父类引用强制转换成子类引用</span></span><br><span class="line"><span class="comment">        ZhuBaJie zhuBaJie = (ZhuBaJie)tank;</span></span><br><span class="line"><span class="comment">        zhuBaJie.圈养时刻();</span></span><br><span class="line"><span class="comment">        Tank tank1 = new ChenYaoJin();*/</span></span><br><span class="line">        method(<span class="keyword">new</span> <span class="title class_">ZhuBaJie</span>());</span><br><span class="line">        method(<span class="keyword">new</span> <span class="title class_">ChenYaoJin</span>());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 方法抽取</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">method</span><span class="params">(Tank tank)</span>&#123;<span class="comment">//Tank tank = new ChenYaoJin();</span></span><br><span class="line">        tank.pingA();</span><br><span class="line">        <span class="comment">//(ZhuBaJie)ChenYaoJin;ClassCastException</span></span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * instanceof 判断某个引用的类型</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="keyword">if</span>(tank <span class="keyword">instanceof</span> ZhuBaJie)&#123;</span><br><span class="line">            <span class="type">ZhuBaJie</span> <span class="variable">zhuBaJie</span> <span class="operator">=</span> (ZhuBaJie) tank;</span><br><span class="line">            zhuBaJie.圈养时刻();</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(tank <span class="keyword">instanceof</span> ChenYaoJin)&#123;</span><br><span class="line">            <span class="type">ChenYaoJin</span> <span class="variable">chenYaoJin</span> <span class="operator">=</span> (ChenYaoJin) tank;</span><br><span class="line">            chenYaoJin.正义潜能();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 父类：坦克</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Tank</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">pingA</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;平A&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 子类：程咬金</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ChenYaoJin</span> <span class="keyword">extends</span> <span class="title class_">Tank</span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 重写父类的pingA成员方法</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">pingA</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;两把斧子旋转&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 子类独有的方法</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> 正义潜能()&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;5秒真男人&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 子类：猪八戒</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ZhuBaJie</span> <span class="keyword">extends</span> <span class="title class_">Tank</span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 重写父类的pingA成员方法</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">pingA</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;肉蛋蹦床&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 子类独有的方法</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> 圈养时刻()&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;释放一个屏障，限制敌人的走位&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-static"><a href="#6-static" class="headerlink" title="6.static"></a>6.static</h2><ul>
+<li><p>static关键字： </p>
+<ul>
+<li><p>1.随着类的加载而加载（其实就是跟随字节码文件加载而加载） </p>
+</li>
+<li><p>2.优先于对象而存在的 </p>
+</li>
+<li><p>3.可以被类的所有对象共享 </p>
+<ul>
+<li>这句话就告诉我们，什么时候该用静态来修饰成员</li>
+<li>班级编号 是一个成员属性，可以被所有学生共享，可以用static修饰 </li>
+<li>饮水机 static 水杯 不能用static </li>
+<li>共性用静态，非共性用非静态</li>
+</ul>
+</li>
+<li><p>4.可以直接通过类名.出来 </p>
+</li>
+<li><p>5.注意事项： </p>
+<ul>
+<li>1.在静态方法中是没有this关键字的，因为静态随着着类的加载而加载，this是随着对象创建而存在的 </li>
+<li>2.静态比对象优先存在 </li>
+<li>3.静态方法只能访问静态成员变量或者静态成员方法 </li>
+<li>4.非静态方法可以访问非静态成员，也可以访问静态成员 </li>
+<li>5.诀窍：记住静态只能访问静态就可以</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo07static</span>关键字 &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">        <span class="type">Student</span> <span class="variable">stu</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>();</span><br><span class="line">        stu.name=<span class="string">&quot;Andy&quot;</span>;</span><br><span class="line">        Student.college = <span class="string">&quot;软件学院&quot;</span>;</span><br><span class="line">        stu.say();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span>&#123;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 学院</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">static</span> String college;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">say</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(name+<span class="string">&quot;:&quot;</span>+college);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">print</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="comment">//在静态方法中是没有this关键字的，因为静态随着着类的加载而加载，this是随着对象创建而存在的</span></span><br><span class="line">        <span class="comment">/*System.out.println(this.name);*/</span></span><br><span class="line">        System.out.println(college);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="7-构造方法"><a href="#7-构造方法" class="headerlink" title="7.构造方法"></a>7.构造方法</h2><ul>
+<li><p>构造方法：（Constructor） </p>
+<ul>
+<li><p>作用： </p>
+<ul>
+<li>1.创建对象用 new 类的构造方法() </li>
+<li>2.给成员变量进行初始化赋值</li>
+</ul>
+</li>
+<li><p>写法： </p>
+<ul>
+<li>方法名，和类名必须保持一致 </li>
+<li>没有返回值，连void都不能写 </li>
+<li>没有具体的返回值return</li>
+</ul>
+</li>
+<li><p>构造的注意： </p>
+<ul>
+<li>1.在一个类中，你如果不写构造方法，计算机会自动给补充一个无参构造</li>
+<li>2.但是一旦你写构造方法，就会用你写的构造方法，原来的无参构造就被踢出了</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo08</span>构造方法 &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 实例化一个Father对象</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        new Father();</span></span><br><span class="line"><span class="comment">        Father f =  new Father(&quot;Andy&quot;,23);</span></span><br><span class="line"><span class="comment">        System.out.println(f.getName());</span></span><br><span class="line"><span class="comment">        System.out.println(f.getAge());*/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Father</span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 成员变量</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 有参构造</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> name</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> age</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Father</span><span class="params">(String name, <span class="type">int</span> age)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">        <span class="built_in">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 方法名，和类名必须保持一致</span></span><br><span class="line"><span class="comment">     *  没有返回值，连void都不能写</span></span><br><span class="line"><span class="comment">     *  没有具体的返回值return</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Father</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Father的构造方法&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getAge</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>java实训笔记</category>
@@ -220,162 +422,6 @@
       <tags>
         <tag>java基础</tag>
         <tag>javase</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我的第一篇博客</title>
-    <url>/post/63785.html</url>
-    <content><![CDATA[<h1 id="用户管理系统"><a href="#用户管理系统" class="headerlink" title="用户管理系统"></a>用户管理系统</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
-<li><a href="#%E9%A1%B9%E7%9B%AE%E6%A6%82%E8%BF%B0">项目概述</a><ul>
-<li><p><a href="#1%E7%9B%AE%E6%A0%87">1.目标</a></p>
-</li>
-<li><p><a href="#2%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F">2.开发模式</a></p>
-</li>
-<li><p><a href="#3%E6%8A%80%E6%9C%AF%E6%A0%88">3.技术栈</a></p>
-</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h1 id="项目概述"><a href="#项目概述" class="headerlink" title="项目概述"></a>项目概述</h1><h2 id="1-目标"><a href="#1-目标" class="headerlink" title="1.目标"></a>1.目标</h2><blockquote>
-<p>通过学习本项目，深刻理解<strong>前后端分离的思想</strong>，具备独立搭建前后端分离项目的能力及功能扩展能力</p>
-</blockquote>
-<h2 id="2-开发模式"><a href="#2-开发模式" class="headerlink" title="2.开发模式"></a>2.开发模式</h2><blockquote>
-<p>前端项目：<code>Vue+ElementUI</code></p>
-<p>后端项目：<code>SpringBoot+MyBatis-Plus</code></p>
-<p>数据库：    <code>MySql</code></p>
-</blockquote>
-<h2 id="3-技术栈"><a href="#3-技术栈" class="headerlink" title="3.技术栈"></a>3.技术栈</h2><table>
-<thead>
-<tr>
-<th>前端技术</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>Vue</code></td>
-<td>前端框架</td>
-</tr>
-<tr>
-<td><code>Vuex</code></td>
-<td>全局状态管理框架</td>
-</tr>
-<tr>
-<td><code>ElementUI</code></td>
-<td>前端UI框架</td>
-</tr>
-<tr>
-<td><code>Axios</code></td>
-<td>前端HTTP框架</td>
-</tr>
-<tr>
-<td><code>vue-element-admin</code></td>
-<td>项目脚手架</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th>后端技术</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>SpringBoot</code></td>
-<td>容器+MVC框架</td>
-</tr>
-<tr>
-<td><code>MyBatis</code></td>
-<td>ORM框架</td>
-</tr>
-<tr>
-<td><code>MyBatis-plus</code></td>
-<td>MyBatis增强工具</td>
-</tr>
-<tr>
-<td><code>Redis</code></td>
-<td>非关系型数据库</td>
-</tr>
-</tbody></table>
-<p><a href="https://www.wolai.com/qgsYJoozyv59fshVdQAUvs" title="前端">前端</a></p>
-<p><a href="https://www.wolai.com/nuemM6Whjfy18p1N61D21q" title="后端">后端</a></p>
-<p><a href="https://www.wolai.com/xzg8frW8EeQ1ZSkz4UAfcf" title="前后端对接">前后端对接</a></p>
-<p><a href="https://www.wolai.com/pSVQdgwdnjTfJb2hQKNnMJ" title="知识点">知识点</a></p>
-]]></content>
-      <categories>
-        <category>项目笔记</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-        <tag>vue</tag>
-        <tag>SpringBoot</tag>
-        <tag>Vue</tag>
-        <tag>Element UI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SpringBoot整合第三方技术</title>
-    <url>/post/0.html</url>
-    <content><![CDATA[<h1 id="springBoot整合第三方技术"><a href="#springBoot整合第三方技术" class="headerlink" title="springBoot整合第三方技术"></a>springBoot整合第三方技术</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
-<li><a href="#%E4%B8%80%E6%95%B4%E5%90%88MyBatis">一、整合MyBatis</a><ul>
-<li><a href="#1%E5%88%9B%E5%BB%BA%E6%96%B0%E6%A8%A1%E5%9D%97">1.创建新模块</a><ul>
-<li><a href="#%E9%80%89%E6%8B%A9spring%E5%88%9D%E5%A7%8B%E5%8C%96%E5%B9%B6%E9%85%8D%E7%BD%AE%E6%A8%A1%E5%9D%97%E7%9B%B8%E5%85%B3%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF">选择spring初始化，并配置模块相关基础信息</a></li>
-</ul>
-</li>
-<li><a href="#2%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E5%A4%84%E7%90%86">2.常见问题处理</a></li>
-</ul>
-</li>
-<li><a href="#%E4%BA%8C%E6%95%B4%E5%90%88MyBatis-Plus">二.整合MyBatis-Plus</a><ul>
-<li><a href="#1%E6%89%8B%E5%8A%A8%E6%B7%BBspringBooot%E6%95%B4%E5%90%88MybatisPlus%E5%9D%90%E6%A0%87">1.手动添springBooot整合MybatisPlus坐标</a></li>
-<li><a href="#2%E5%AE%9A%E4%B9%89%E6%95%B0%E6%8D%AE%E5%B1%82%E6%8E%A5%E5%8F%A3%E4%B8%8E%E6%98%A0%E5%B0%84%E9%85%8D%E7%BD%AE%E7%BB%A7%E6%89%BFBaseMapper">2.定义数据层接口与映射配置，继承BaseMapper</a></li>
-<li><a href="#3%E5%90%8C%E6%95%B4%E5%90%88mybatis">3.同整合mybatis</a></li>
-</ul>
-</li>
-<li><a href="#%E4%B8%89%E6%95%B4%E5%90%88Druid">三、整合Druid</a><ul>
-<li><a href="#1%E5%AF%BC%E5%85%A5%E5%AF%B9%E5%BA%94%E7%9A%84starter">1.导入对应的starter</a></li>
-<li><a href="#2%E9%85%8D%E7%BD%AE%E5%AF%B9%E5%BA%94%E7%9A%84%E8%AE%BE%E7%BD%AE%E6%88%96%E9%87%87%E7%94%A8%E9%BB%98%E8%AE%A4%E9%85%8D%E7%BD%AE">2.配置对应的设置或采用默认配置</a></li>
-</ul>
-</li>
-</ul>
-<h1 id="一、整合MyBatis"><a href="#一、整合MyBatis" class="headerlink" title="一、整合MyBatis"></a>一、整合MyBatis</h1><ul>
-<li>核心配置： 数据库连接相关信息</li>
-<li>映射配置：SQL映射（XML&#x2F;注解）</li>
-</ul>
-<h2 id="1-创建新模块"><a href="#1-创建新模块" class="headerlink" title="1.创建新模块"></a>1.创建新模块</h2><h3 id="选择spring初始化，并配置模块相关基础信息"><a href="#选择spring初始化，并配置模块相关基础信息" class="headerlink" title="选择spring初始化，并配置模块相关基础信息"></a>选择spring初始化，并配置模块相关基础信息</h3><ol>
-<li>选择当前模块需要的技术集（自动导入依赖坐标）</li>
-<li>设置数据源参数</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">spring:</span><br><span class="line">  datasource:</span><br><span class="line">    driver-class-name: com.mysql.jdbc.Driver</span><br><span class="line">    url: jdbc:mysql:<span class="comment">//localhost:3306/ssm</span></span><br><span class="line">    username: root</span><br><span class="line">    password: <span class="number">123456</span></span><br></pre></td></tr></table></figure>
-
-<p>4.定义数据层接口与映射配置</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Mapper</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">BookDao</span> &#123;</span><br><span class="line">    <span class="meta">@Select(&quot;select *from tbl_book where id =#&#123;id&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> Book <span class="title function_">getById</span><span class="params">(Integer id)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>5.测试类注入接口，测试功能</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SpringBootMyBatisApplicationTests</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> BookDao bookDao;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">contextLoads</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(bookDao.getById(<span class="number">1</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-常见问题处理"><a href="#2-常见问题处理" class="headerlink" title="2.常见问题处理"></a>2.常见问题处理</h2><ol>
-<li>MySQL 8.X驱动强制要求设置时区<ul>
-<li>修改url，添加serverTimezone设定</li>
-<li>修改MySQL数据库配置</li>
-</ul>
-</li>
-<li>驱动类过时，提醒更换为com.mysql.cj.jdbc.Driver</li>
-</ol>
-<h1 id="二-整合MyBatis-Plus"><a href="#二-整合MyBatis-Plus" class="headerlink" title="二.整合MyBatis-Plus"></a>二.整合MyBatis-Plus</h1><h2 id="1-手动添springBooot整合MybatisPlus坐标"><a href="#1-手动添springBooot整合MybatisPlus坐标" class="headerlink" title="1.手动添springBooot整合MybatisPlus坐标"></a>1.手动添springBooot整合MybatisPlus坐标</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">      &lt;groupId&gt;com.baomidou&lt;/groupId&gt;</span><br><span class="line">      &lt;artifactId&gt;mybatis-plus-boot-starter&lt;/artifactId&gt;</span><br><span class="line">      &lt;version&gt;<span class="number">3.4</span><span class="number">.3</span>&lt;/version&gt;</span><br><span class="line">  &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="2-定义数据层接口与映射配置，继承BaseMapper"><a href="#2-定义数据层接口与映射配置，继承BaseMapper" class="headerlink" title="2.定义数据层接口与映射配置，继承BaseMapper"></a>2.定义数据层接口与映射配置，继承BaseMapper</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Mapper</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">BookDao</span> <span class="keyword">extends</span> <span class="title class_">BaseMapper</span>&lt;Book&gt; &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-同整合mybatis"><a href="#3-同整合mybatis" class="headerlink" title="3.同整合mybatis"></a>3.同整合mybatis</h2><h1 id="三、整合Druid"><a href="#三、整合Druid" class="headerlink" title="三、整合Druid"></a>三、整合Druid</h1><h2 id="1-导入对应的starter"><a href="#1-导入对应的starter" class="headerlink" title="1.导入对应的starter"></a>1.导入对应的starter</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>druid<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.1.16<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="2-配置对应的设置或采用默认配置"><a href="#2-配置对应的设置或采用默认配置" class="headerlink" title="2.配置对应的设置或采用默认配置"></a>2.配置对应的设置或采用默认配置</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">spring:</span><br><span class="line">  datasource:</span><br><span class="line">    druid:</span><br><span class="line">      driver-class-name: com.mysql.jdbc.Driver</span><br><span class="line">      url: jdbc:mysql://localhost:3306/ssm</span><br><span class="line">      username: root</span><br><span class="line">      password: 123456</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Spring</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-        <tag>SpringBoot</tag>
-        <tag>MyBatis</tag>
       </tags>
   </entry>
   <entry>
@@ -3518,8 +3564,164 @@
       </categories>
       <tags>
         <tag>java</tag>
-        <tag>SpringBoot</tag>
         <tag>后端</tag>
+        <tag>SpringBoot</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的第一篇博客</title>
+    <url>/post/63785.html</url>
+    <content><![CDATA[<h1 id="用户管理系统"><a href="#用户管理系统" class="headerlink" title="用户管理系统"></a>用户管理系统</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
+<li><a href="#%E9%A1%B9%E7%9B%AE%E6%A6%82%E8%BF%B0">项目概述</a><ul>
+<li><p><a href="#1%E7%9B%AE%E6%A0%87">1.目标</a></p>
+</li>
+<li><p><a href="#2%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F">2.开发模式</a></p>
+</li>
+<li><p><a href="#3%E6%8A%80%E6%9C%AF%E6%A0%88">3.技术栈</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="项目概述"><a href="#项目概述" class="headerlink" title="项目概述"></a>项目概述</h1><h2 id="1-目标"><a href="#1-目标" class="headerlink" title="1.目标"></a>1.目标</h2><blockquote>
+<p>通过学习本项目，深刻理解<strong>前后端分离的思想</strong>，具备独立搭建前后端分离项目的能力及功能扩展能力</p>
+</blockquote>
+<h2 id="2-开发模式"><a href="#2-开发模式" class="headerlink" title="2.开发模式"></a>2.开发模式</h2><blockquote>
+<p>前端项目：<code>Vue+ElementUI</code></p>
+<p>后端项目：<code>SpringBoot+MyBatis-Plus</code></p>
+<p>数据库：    <code>MySql</code></p>
+</blockquote>
+<h2 id="3-技术栈"><a href="#3-技术栈" class="headerlink" title="3.技术栈"></a>3.技术栈</h2><table>
+<thead>
+<tr>
+<th>前端技术</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Vue</code></td>
+<td>前端框架</td>
+</tr>
+<tr>
+<td><code>Vuex</code></td>
+<td>全局状态管理框架</td>
+</tr>
+<tr>
+<td><code>ElementUI</code></td>
+<td>前端UI框架</td>
+</tr>
+<tr>
+<td><code>Axios</code></td>
+<td>前端HTTP框架</td>
+</tr>
+<tr>
+<td><code>vue-element-admin</code></td>
+<td>项目脚手架</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>后端技术</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>SpringBoot</code></td>
+<td>容器+MVC框架</td>
+</tr>
+<tr>
+<td><code>MyBatis</code></td>
+<td>ORM框架</td>
+</tr>
+<tr>
+<td><code>MyBatis-plus</code></td>
+<td>MyBatis增强工具</td>
+</tr>
+<tr>
+<td><code>Redis</code></td>
+<td>非关系型数据库</td>
+</tr>
+</tbody></table>
+<p><a href="https://www.wolai.com/qgsYJoozyv59fshVdQAUvs" title="前端">前端</a></p>
+<p><a href="https://www.wolai.com/nuemM6Whjfy18p1N61D21q" title="后端">后端</a></p>
+<p><a href="https://www.wolai.com/xzg8frW8EeQ1ZSkz4UAfcf" title="前后端对接">前后端对接</a></p>
+<p><a href="https://www.wolai.com/pSVQdgwdnjTfJb2hQKNnMJ" title="知识点">知识点</a></p>
+]]></content>
+      <categories>
+        <category>项目笔记</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>SpringBoot</tag>
+        <tag>vue</tag>
+        <tag>Vue</tag>
+        <tag>Element UI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SpringBoot整合第三方技术</title>
+    <url>/post/0.html</url>
+    <content><![CDATA[<h1 id="springBoot整合第三方技术"><a href="#springBoot整合第三方技术" class="headerlink" title="springBoot整合第三方技术"></a>springBoot整合第三方技术</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
+<li><a href="#%E4%B8%80%E6%95%B4%E5%90%88MyBatis">一、整合MyBatis</a><ul>
+<li><a href="#1%E5%88%9B%E5%BB%BA%E6%96%B0%E6%A8%A1%E5%9D%97">1.创建新模块</a><ul>
+<li><a href="#%E9%80%89%E6%8B%A9spring%E5%88%9D%E5%A7%8B%E5%8C%96%E5%B9%B6%E9%85%8D%E7%BD%AE%E6%A8%A1%E5%9D%97%E7%9B%B8%E5%85%B3%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF">选择spring初始化，并配置模块相关基础信息</a></li>
+</ul>
+</li>
+<li><a href="#2%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E5%A4%84%E7%90%86">2.常见问题处理</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BA%8C%E6%95%B4%E5%90%88MyBatis-Plus">二.整合MyBatis-Plus</a><ul>
+<li><a href="#1%E6%89%8B%E5%8A%A8%E6%B7%BBspringBooot%E6%95%B4%E5%90%88MybatisPlus%E5%9D%90%E6%A0%87">1.手动添springBooot整合MybatisPlus坐标</a></li>
+<li><a href="#2%E5%AE%9A%E4%B9%89%E6%95%B0%E6%8D%AE%E5%B1%82%E6%8E%A5%E5%8F%A3%E4%B8%8E%E6%98%A0%E5%B0%84%E9%85%8D%E7%BD%AE%E7%BB%A7%E6%89%BFBaseMapper">2.定义数据层接口与映射配置，继承BaseMapper</a></li>
+<li><a href="#3%E5%90%8C%E6%95%B4%E5%90%88mybatis">3.同整合mybatis</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%89%E6%95%B4%E5%90%88Druid">三、整合Druid</a><ul>
+<li><a href="#1%E5%AF%BC%E5%85%A5%E5%AF%B9%E5%BA%94%E7%9A%84starter">1.导入对应的starter</a></li>
+<li><a href="#2%E9%85%8D%E7%BD%AE%E5%AF%B9%E5%BA%94%E7%9A%84%E8%AE%BE%E7%BD%AE%E6%88%96%E9%87%87%E7%94%A8%E9%BB%98%E8%AE%A4%E9%85%8D%E7%BD%AE">2.配置对应的设置或采用默认配置</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="一、整合MyBatis"><a href="#一、整合MyBatis" class="headerlink" title="一、整合MyBatis"></a>一、整合MyBatis</h1><ul>
+<li>核心配置： 数据库连接相关信息</li>
+<li>映射配置：SQL映射（XML&#x2F;注解）</li>
+</ul>
+<h2 id="1-创建新模块"><a href="#1-创建新模块" class="headerlink" title="1.创建新模块"></a>1.创建新模块</h2><h3 id="选择spring初始化，并配置模块相关基础信息"><a href="#选择spring初始化，并配置模块相关基础信息" class="headerlink" title="选择spring初始化，并配置模块相关基础信息"></a>选择spring初始化，并配置模块相关基础信息</h3><ol>
+<li>选择当前模块需要的技术集（自动导入依赖坐标）</li>
+<li>设置数据源参数</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">spring:</span><br><span class="line">  datasource:</span><br><span class="line">    driver-class-name: com.mysql.jdbc.Driver</span><br><span class="line">    url: jdbc:mysql:<span class="comment">//localhost:3306/ssm</span></span><br><span class="line">    username: root</span><br><span class="line">    password: <span class="number">123456</span></span><br></pre></td></tr></table></figure>
+
+<p>4.定义数据层接口与映射配置</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Mapper</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">BookDao</span> &#123;</span><br><span class="line">    <span class="meta">@Select(&quot;select *from tbl_book where id =#&#123;id&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> Book <span class="title function_">getById</span><span class="params">(Integer id)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>5.测试类注入接口，测试功能</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SpringBootMyBatisApplicationTests</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> BookDao bookDao;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">contextLoads</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(bookDao.getById(<span class="number">1</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-常见问题处理"><a href="#2-常见问题处理" class="headerlink" title="2.常见问题处理"></a>2.常见问题处理</h2><ol>
+<li>MySQL 8.X驱动强制要求设置时区<ul>
+<li>修改url，添加serverTimezone设定</li>
+<li>修改MySQL数据库配置</li>
+</ul>
+</li>
+<li>驱动类过时，提醒更换为com.mysql.cj.jdbc.Driver</li>
+</ol>
+<h1 id="二-整合MyBatis-Plus"><a href="#二-整合MyBatis-Plus" class="headerlink" title="二.整合MyBatis-Plus"></a>二.整合MyBatis-Plus</h1><h2 id="1-手动添springBooot整合MybatisPlus坐标"><a href="#1-手动添springBooot整合MybatisPlus坐标" class="headerlink" title="1.手动添springBooot整合MybatisPlus坐标"></a>1.手动添springBooot整合MybatisPlus坐标</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">      &lt;groupId&gt;com.baomidou&lt;/groupId&gt;</span><br><span class="line">      &lt;artifactId&gt;mybatis-plus-boot-starter&lt;/artifactId&gt;</span><br><span class="line">      &lt;version&gt;<span class="number">3.4</span><span class="number">.3</span>&lt;/version&gt;</span><br><span class="line">  &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-定义数据层接口与映射配置，继承BaseMapper"><a href="#2-定义数据层接口与映射配置，继承BaseMapper" class="headerlink" title="2.定义数据层接口与映射配置，继承BaseMapper"></a>2.定义数据层接口与映射配置，继承BaseMapper</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Mapper</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">BookDao</span> <span class="keyword">extends</span> <span class="title class_">BaseMapper</span>&lt;Book&gt; &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-同整合mybatis"><a href="#3-同整合mybatis" class="headerlink" title="3.同整合mybatis"></a>3.同整合mybatis</h2><h1 id="三、整合Druid"><a href="#三、整合Druid" class="headerlink" title="三、整合Druid"></a>三、整合Druid</h1><h2 id="1-导入对应的starter"><a href="#1-导入对应的starter" class="headerlink" title="1.导入对应的starter"></a>1.导入对应的starter</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>druid<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.1.16<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-配置对应的设置或采用默认配置"><a href="#2-配置对应的设置或采用默认配置" class="headerlink" title="2.配置对应的设置或采用默认配置"></a>2.配置对应的设置或采用默认配置</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">spring:</span><br><span class="line">  datasource:</span><br><span class="line">    druid:</span><br><span class="line">      driver-class-name: com.mysql.jdbc.Driver</span><br><span class="line">      url: jdbc:mysql://localhost:3306/ssm</span><br><span class="line">      username: root</span><br><span class="line">      password: 123456</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Spring</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>SpringBoot</tag>
+        <tag>MyBatis</tag>
       </tags>
   </entry>
 </search>
