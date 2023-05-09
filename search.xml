@@ -66,94 +66,6 @@
       </tags>
   </entry>
   <entry>
-    <title>我的第一篇博客</title>
-    <url>/post/63785.html</url>
-    <content><![CDATA[<h1 id="用户管理系统"><a href="#用户管理系统" class="headerlink" title="用户管理系统"></a>用户管理系统</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
-<li><a href="#%E9%A1%B9%E7%9B%AE%E6%A6%82%E8%BF%B0">项目概述</a><ul>
-<li><p><a href="#1%E7%9B%AE%E6%A0%87">1.目标</a></p>
-</li>
-<li><p><a href="#2%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F">2.开发模式</a></p>
-</li>
-<li><p><a href="#3%E6%8A%80%E6%9C%AF%E6%A0%88">3.技术栈</a></p>
-</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h2 id="项目概述"><a href="#项目概述" class="headerlink" title="项目概述"></a>项目概述</h2><h3 id="1-目标"><a href="#1-目标" class="headerlink" title="1.目标"></a>1.目标</h3><blockquote>
-<p>通过学习本项目，深刻理解<strong>前后端分离的思想</strong>，具备独立搭建前后端分离项目的能力及功能扩展能力</p>
-</blockquote>
-<h3 id="2-开发模式"><a href="#2-开发模式" class="headerlink" title="2.开发模式"></a>2.开发模式</h3><blockquote>
-<p>前端项目：<code>Vue+ElementUI</code></p>
-<p>后端项目：<code>SpringBoot+MyBatis-Plus</code></p>
-<p>数据库：    <code>MySql</code></p>
-</blockquote>
-<h3 id="3-技术栈"><a href="#3-技术栈" class="headerlink" title="3.技术栈"></a>3.技术栈</h3><table>
-<thead>
-<tr>
-<th>前端技术</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>Vue</code></td>
-<td>前端框架</td>
-</tr>
-<tr>
-<td><code>Vuex</code></td>
-<td>全局状态管理框架</td>
-</tr>
-<tr>
-<td><code>ElementUI</code></td>
-<td>前端UI框架</td>
-</tr>
-<tr>
-<td><code>Axios</code></td>
-<td>前端HTTP框架</td>
-</tr>
-<tr>
-<td><code>vue-element-admin</code></td>
-<td>项目脚手架</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th>后端技术</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>SpringBoot</code></td>
-<td>容器+MVC框架</td>
-</tr>
-<tr>
-<td><code>MyBatis</code></td>
-<td>ORM框架</td>
-</tr>
-<tr>
-<td><code>MyBatis-plus</code></td>
-<td>MyBatis增强工具</td>
-</tr>
-<tr>
-<td><code>Redis</code></td>
-<td>非关系型数据库</td>
-</tr>
-</tbody></table>
-<p><a href="https://www.wolai.com/qgsYJoozyv59fshVdQAUvs" title="前端">前端</a></p>
-<p><a href="https://www.wolai.com/nuemM6Whjfy18p1N61D21q" title="后端">后端</a></p>
-<p><a href="https://www.wolai.com/xzg8frW8EeQ1ZSkz4UAfcf" title="前后端对接">前后端对接</a></p>
-<p><a href="https://www.wolai.com/pSVQdgwdnjTfJb2hQKNnMJ" title="知识点">知识点</a></p>
-]]></content>
-      <categories>
-        <category>java项目笔记</category>
-      </categories>
-      <tags>
-        <tag>博客记录</tag>
-        <tag>java笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>用户管理系统后端</title>
     <url>/post/29c5a7c0.html</url>
     <content><![CDATA[<h1 id="用户管理系统后端"><a href="#用户管理系统后端" class="headerlink" title="用户管理系统后端"></a>用户管理系统后端</h1><hr>
@@ -654,6 +566,319 @@
         <tag>java</tag>
         <tag>SpringBoot</tag>
         <tag>后端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的第一篇博客</title>
+    <url>/post/63785.html</url>
+    <content><![CDATA[<h1 id="用户管理系统"><a href="#用户管理系统" class="headerlink" title="用户管理系统"></a>用户管理系统</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
+<li><a href="#%E9%A1%B9%E7%9B%AE%E6%A6%82%E8%BF%B0">项目概述</a><ul>
+<li><p><a href="#1%E7%9B%AE%E6%A0%87">1.目标</a></p>
+</li>
+<li><p><a href="#2%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F">2.开发模式</a></p>
+</li>
+<li><p><a href="#3%E6%8A%80%E6%9C%AF%E6%A0%88">3.技术栈</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="项目概述"><a href="#项目概述" class="headerlink" title="项目概述"></a>项目概述</h2><h3 id="1-目标"><a href="#1-目标" class="headerlink" title="1.目标"></a>1.目标</h3><blockquote>
+<p>通过学习本项目，深刻理解<strong>前后端分离的思想</strong>，具备独立搭建前后端分离项目的能力及功能扩展能力</p>
+</blockquote>
+<h3 id="2-开发模式"><a href="#2-开发模式" class="headerlink" title="2.开发模式"></a>2.开发模式</h3><blockquote>
+<p>前端项目：<code>Vue+ElementUI</code></p>
+<p>后端项目：<code>SpringBoot+MyBatis-Plus</code></p>
+<p>数据库：    <code>MySql</code></p>
+</blockquote>
+<h3 id="3-技术栈"><a href="#3-技术栈" class="headerlink" title="3.技术栈"></a>3.技术栈</h3><table>
+<thead>
+<tr>
+<th>前端技术</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Vue</code></td>
+<td>前端框架</td>
+</tr>
+<tr>
+<td><code>Vuex</code></td>
+<td>全局状态管理框架</td>
+</tr>
+<tr>
+<td><code>ElementUI</code></td>
+<td>前端UI框架</td>
+</tr>
+<tr>
+<td><code>Axios</code></td>
+<td>前端HTTP框架</td>
+</tr>
+<tr>
+<td><code>vue-element-admin</code></td>
+<td>项目脚手架</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>后端技术</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>SpringBoot</code></td>
+<td>容器+MVC框架</td>
+</tr>
+<tr>
+<td><code>MyBatis</code></td>
+<td>ORM框架</td>
+</tr>
+<tr>
+<td><code>MyBatis-plus</code></td>
+<td>MyBatis增强工具</td>
+</tr>
+<tr>
+<td><code>Redis</code></td>
+<td>非关系型数据库</td>
+</tr>
+</tbody></table>
+<p><a href="https://www.wolai.com/qgsYJoozyv59fshVdQAUvs" title="前端">前端</a></p>
+<p><a href="https://www.wolai.com/nuemM6Whjfy18p1N61D21q" title="后端">后端</a></p>
+<p><a href="https://www.wolai.com/xzg8frW8EeQ1ZSkz4UAfcf" title="前后端对接">前后端对接</a></p>
+<p><a href="https://www.wolai.com/pSVQdgwdnjTfJb2hQKNnMJ" title="知识点">知识点</a></p>
+]]></content>
+      <categories>
+        <category>项目笔记</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>SpringBoot</tag>
+        <tag>vue</tag>
+        <tag>Vue</tag>
+        <tag>Element UI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java基础</title>
+    <url>/post/b4562165.html</url>
+    <content><![CDATA[<h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><hr>
+<h2 id="day01"><a href="#day01" class="headerlink" title="day01"></a>day01</h2><h3 id="一、变量"><a href="#一、变量" class="headerlink" title="一、变量"></a>一、变量</h3><ol>
+<li><p>什么是变量 就是内存中的一个存储空间，相当于一个代词 </p>
+</li>
+<li><p>变量的作用 让代码变得简洁，复用性好。 </p>
+</li>
+<li><p>如何使用变量</p>
+<ul>
+<li><p>1.变量的声明（创建） </p>
+</li>
+<li><p>2.变量的初始化</p>
+</li>
+</ul>
+</li>
+<li><p>使用变量的注意事项</p>
+<ul>
+<li><p>1.命名规范 </p>
+</li>
+<li><p>2.规定 不能以数字开头、 不能用java关键字、 同一范围内变量名不能重复、 没有声明的变量不能使用、 需要往变量里面存的数据类型，必须和变量的类型保持一致</p>
+</li>
+</ul>
+</li>
+<li><p>java数据类型</p>
+<ul>
+<li>分类：基本数据类型<ul>
+<li>1.整数类型 <code>byte</code> <code>short</code> <code>int</code>  <code>long </code></li>
+<li>2.小数类型 <code>float</code>  <code>double</code></li>
+<li>3.字符类型 <code>char </code></li>
+<li>4.布尔类型 <code>boolean</code> 默认值是<code>false</code> 引用数据类型</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo01</span>变量 &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 如何使用变量</span></span><br><span class="line">        <span class="comment">//   1.变量的声明（创建）:就是在内存中开辟一个整型空间，名字叫a</span></span><br><span class="line">        <span class="type">int</span> a;</span><br><span class="line">        <span class="comment">//   2.变量的初始化：就是往变量里面存一个值</span></span><br><span class="line">        a = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="二、运算符"><a href="#二、运算符" class="headerlink" title="二、运算符"></a>二、运算符</h3><ul>
+<li>java中的运算符（运算符：运算一定会有结果） <ul>
+<li>1.算术运算符   + - * &#x2F; %(取模) ++（自增） –（自减） </li>
+<li>2.赋值运算符   &#x3D; +&#x3D;…. </li>
+<li>3.关系运算符   &lt; &gt; !&#x3D; </li>
+<li>4.逻辑运算符   &amp;&#x2F;&amp;&amp;     |&#x2F;||     ! </li>
+<li>5.连接运算符   + java中的多态(事物存在的多种形态 水：水蒸气 冰)….. </li>
+<li>6.三目运算符   (关系运算符)? 表达式1 : 表达式2</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo02</span>运算符 &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 三目运算符</span></span><br><span class="line"><span class="comment">         * (关系运算表达式)? 表达式1 : 表达式2</span></span><br><span class="line"><span class="comment">         *  执行流程：</span></span><br><span class="line"><span class="comment">         *      1.计算关系运算表达式的结果（boolean类型）</span></span><br><span class="line"><span class="comment">         *      2.若关系运算表达式的结果为true,</span></span><br><span class="line"><span class="comment">         *          则整个三目运算表达式的结果是表达式1</span></span><br><span class="line"><span class="comment">         *      3.若关系运算表达式的结果为false,</span></span><br><span class="line"><span class="comment">         *          则整个三目运算表达式的结果是表达式2</span></span><br><span class="line"><span class="comment">         * 思考：</span></span><br><span class="line"><span class="comment">         *  和if语句有什么区别？</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">a1</span> <span class="operator">=</span> <span class="number">100</span>, b1=<span class="number">200</span>;</span><br><span class="line">        <span class="type">String</span> <span class="variable">result</span> <span class="operator">=</span> a1&gt;b1?<span class="string">&quot;正确&quot;</span>:<span class="string">&quot;错误&quot;</span>;</span><br><span class="line">        System.out.println(<span class="string">&quot;result===&quot;</span>+result);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(a1&gt;b1)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;正确&quot;</span>);</span><br><span class="line">            System.out.println(<span class="string">&quot;正确&quot;</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;错误&quot;</span>);</span><br><span class="line">            System.out.println(<span class="string">&quot;错误&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 连接运算符 +</span></span><br><span class="line"><span class="comment">         *  当+号左右两边，有一边是字符串的时候（双引号括起来的东西就是字符串）</span></span><br><span class="line"><span class="comment">         *  那么这个+号 就有两个功能：</span></span><br><span class="line"><span class="comment">         *      1.进行字符串拼接</span></span><br><span class="line"><span class="comment">         *      2.进行类型转换，将其他数据类型转换成String类型</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">100</span>;</span><br><span class="line">        <span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> <span class="string">&quot;a=&quot;</span>+a;</span><br><span class="line">        <span class="comment">//&quot;a=100&quot;</span></span><br><span class="line">        System.out.println(str);</span><br><span class="line">        <span class="comment">//     &quot;100&quot; + 200</span></span><br><span class="line">        str = <span class="string">&quot;&quot;</span> + <span class="number">100</span> + <span class="number">200</span>;</span><br><span class="line">        <span class="comment">//&quot;100200&quot;</span></span><br><span class="line">        System.out.println(str);</span><br><span class="line">        <span class="comment">//  300 + &quot;&quot;</span></span><br><span class="line">        str = <span class="number">100</span> + <span class="number">200</span> + <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="comment">//&quot;300&quot;</span></span><br><span class="line">        System.out.println(str);</span><br><span class="line">        <span class="comment">//面试题</span></span><br><span class="line">        <span class="comment">//&quot;1156&quot;</span></span><br><span class="line">        System.out.println(<span class="number">5</span> + <span class="number">6</span> + <span class="string">&quot;&quot;</span> + <span class="number">5</span> + <span class="number">6</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="三、循环"><a href="#三、循环" class="headerlink" title="三、循环"></a>三、循环</h3><ul>
+<li>循环结构： <ul>
+<li>1.定义：在java编程里面，需要反复执行某段代码的时候，就要用循环 </li>
+<li>2.为什么要有循环结构:简化代码 </li>
+<li>3.java中循环的分类 while、dowhile、for循环 </li>
+<li>4.循环三要素(每次，你要写循环的时候，回想循环三要素) <ul>
+<li>1.循环的初始值 就是循环从什么时候开始 </li>
+<li>2.循环条件 满足什么条件才开始循环</li>
+<li>3.循环体 就是需要反复执行的那段代码</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo03</span>循环结构 &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * for(初始化语句;循环条件;控制循环条件语句)&#123;</span></span><br><span class="line"><span class="comment">         *     循环体</span></span><br><span class="line"><span class="comment">         * &#125;</span></span><br><span class="line"><span class="comment">         * 执行流程：</span></span><br><span class="line"><span class="comment">         *  1.执行初始化语句</span></span><br><span class="line"><span class="comment">         *  2.判断循环条件（关系运算表达式）boolean类型</span></span><br><span class="line"><span class="comment">         *  3.若循环条件结果为true,执行循环体</span></span><br><span class="line"><span class="comment">         *  4.再执行控制循环条件语句</span></span><br><span class="line"><span class="comment">         *  5.再回到第2步，依次往复执行，直到循环条件结果为false，for循环结束，程序继续向下执行</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;i &lt; <span class="number">100</span> ;i++)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;行动是成功的阶梯，动的越多，登的越高....&quot;</span>+i);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 以下输出结果是什么？</span></span><br><span class="line"><span class="comment">         *  1.语法错误</span></span><br><span class="line"><span class="comment">         *  2.....</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="type">int</span> i=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(System.out.println(<span class="string">&quot;A&quot;</span>);i&lt;<span class="number">5</span>; System.out.println(<span class="string">&quot;B&quot;</span>) )&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;C&quot;</span>);</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="四、嵌套循环"><a href="#四、嵌套循环" class="headerlink" title="四、嵌套循环"></a>四、嵌套循环</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo04</span>嵌套循环 &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 嵌套循环：</span></span><br><span class="line"><span class="comment">     *    就是循环中还有循环,循环的循环体还是循环</span></span><br><span class="line"><span class="comment">     *  1*1=1</span></span><br><span class="line"><span class="comment">     *  1*2=1 2*2=4</span></span><br><span class="line"><span class="comment">     *  1*3=3 2*3=6 3*3=9</span></span><br><span class="line"><span class="comment">     *  ...........</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     *  *=</span></span><br><span class="line"><span class="comment">     *  *= *=</span></span><br><span class="line"><span class="comment">     *  ***</span></span><br><span class="line"><span class="comment">     *  ****</span></span><br><span class="line"><span class="comment">     *  *****</span></span><br><span class="line"><span class="comment">     *  诀窍：</span></span><br><span class="line"><span class="comment">     *      1.分清楚什么是行，什么列</span></span><br><span class="line"><span class="comment">     *      2.外层循环，控制行数，内层循环控制列数</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> args</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">            <span class="comment">//外层循环  控制行数</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;<span class="number">10</span>;i++)&#123;</span><br><span class="line">                <span class="comment">//内层循环  控制列数</span></span><br><span class="line">                <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;i+<span class="number">1</span>;j++)&#123;</span><br><span class="line">                    <span class="comment">//内层循环控制列数所以打印星星的代码要写在内层循环</span></span><br><span class="line">                    <span class="comment">//\t表示制表符  相当于一个tab键   4个空格</span></span><br><span class="line">                    System.out.print(j+<span class="string">&quot;*&quot;</span>+i+<span class="string">&quot;=&quot;</span>+i*j+<span class="string">&quot;\t&quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                System.out.println();<span class="comment">//空的输出语句作用：就是换行</span></span><br><span class="line">            &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="五、冒泡排序"><a href="#五、冒泡排序" class="headerlink" title="五、冒泡排序"></a>五、冒泡排序</h3><p><img src="/images%5C%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.jpg"></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo05</span>冒泡排序 &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 冒泡排序：</span></span><br><span class="line"><span class="comment">     *      1.相邻的两个元素比较，左边比右边的大就互换位置</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> args</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">//整型数组</span></span><br><span class="line">        <span class="type">int</span>[] arr = &#123;<span class="number">2</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">        System.out.println(<span class="string">&quot;排序前：&quot;</span>+Arrays.toString(arr));</span><br><span class="line">        <span class="comment">//外层循环控制行数</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;arr.length-<span class="number">1</span>;i++)&#123;</span><br><span class="line">            <span class="comment">//内层循环控制列数</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;arr.length-<span class="number">1</span>-i;j++)&#123;</span><br><span class="line">                <span class="comment">//编写对比替换逻辑</span></span><br><span class="line">                <span class="comment">//如果左边的元素比右边的元素大</span></span><br><span class="line">                <span class="keyword">if</span>(arr[j]&gt;arr[j+<span class="number">1</span>])&#123;</span><br><span class="line">                    <span class="comment">//就互换位置</span></span><br><span class="line">                    <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> arr[j];</span><br><span class="line">                    arr[j] = arr[j+<span class="number">1</span>];</span><br><span class="line">                    arr[j+<span class="number">1</span>] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        Arrays.sort(arr);</span><br><span class="line">        <span class="comment">//打印数组的API</span></span><br><span class="line">        System.out.println(<span class="string">&quot;排序后：&quot;</span>+Arrays.toString(arr));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="六、方法"><a href="#六、方法" class="headerlink" title="六、方法"></a>六、方法</h3><ul>
+<li><p>方法 </p>
+<ul>
+<li><p>1.什么是方法 还有一种叫法：功能，函数一个意思，其实就是完成特定功能的代码块 举例：手机是一个工具，这个工具有很多功能，打电话，发短信，上网，照相。。。 为什么手机可以打电话，是因为里面有一系列的流程，其实就是一些代码，能够让我们的硬件去工作 </p>
+</li>
+<li><p>2.方法的作用 </p>
+<ul>
+<li>1.提高代码的复用性 </li>
+<li>2.可以封装自己的逻辑，也可以调用其他人写的逻辑 比如<code>System.out.println()</code> 就是在调用其他人写的方法</li>
+</ul>
+</li>
+<li><p>3.方法的格式 修饰符 返回值类型 方法名(参数类型 参数,参数类型 参数,参数类型 参数….){ 方法体语句；（完成特定功能的代码块） return 返回值; } </p>
+</li>
+<li><p>1.修饰符：<code>public static</code> (目前是固定的，后面还可以省略static以及private其他写法，边学边讲) </p>
+</li>
+<li><p>2.返回值类型:任何一个方法都可以有返回值，既然是返回值，就一定会有返回值的类型，如果没有返回值，就写void </p>
+</li>
+<li><p>3.参数类型：参数的数据类型 </p>
+</li>
+<li><p>4.参数： </p>
+<ul>
+<li>1.实际参数（实参） 实际参与运算的 </li>
+<li>2.形式参数（形参） 写在方法上小括号里面的，用于接收实参用的</li>
+</ul>
+</li>
+<li><p>5.方法体语句:特定功能的代码块 </p>
+</li>
+<li><p>6.<code>return </code>结束方法 </p>
+</li>
+<li><p>7.返回值 就是你这个方法（功能）经过一系列运算后得到的结果，由return带给调用者 </p>
+</li>
+<li><p>4.方法的种类 </p>
+<ul>
+<li>1.无参无返回值</li>
+<li>2.有参无返回值 </li>
+<li>3.无参有返回值 </li>
+<li>4.有参有返回值</li>
+</ul>
+</li>
+<li><p>5.使用方法的注意事项 </p>
+<ul>
+<li>1.方法不调用是不执行</li>
+<li>2.方法和方法在创建是平级关系 </li>
+<li>3.方法定义时，小括号里面的参数，用逗号隔开 </li>
+<li>4.方法调用时，有参数必须传递参数，但是不用传递参数的类型 </li>
+<li>5.如果方法体经过一系列运算后，有返回值，一定要写<code>return</code>，将返回值带给调用者</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>需求： 求2个整数的和？？？ 思考：如何写一个方法来完成我们的需求？？？ </p>
+<ul>
+<li>1.明确返回值类型（考虑这个方法有没有返回值） </li>
+<li>2.明确参数列表（考虑这个方法有几个需要参与运算的数）</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> day01;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo06</span>方法 &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> args</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">10</span>,b = <span class="number">20</span>;</span><br><span class="line">            <span class="comment">//a是实际参数，因为代码走到这里，a里面已经有值了</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> sum(a,b);</span><br><span class="line">        System.out.println(sum);</span><br><span class="line">        <span class="type">int</span>[] arr = &#123;<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">6</span>,<span class="number">5</span>&#125;;</span><br><span class="line">        sort(arr);</span><br><span class="line">        <span class="comment">//[1, 2, 3, 4, 5, 6]</span></span><br><span class="line">        System.out.println(Arrays.toString(arr));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">   <span class="comment">/*</span></span><br><span class="line"><span class="comment">   需求：1.编写一个属于自己的冒泡排序方法？？？</span></span><br><span class="line"><span class="comment">   思考：如何写一个方法来完成我们的需求？？？</span></span><br><span class="line"><span class="comment">            *      1.明确返回值类型（考虑这个方法有没有返回值）</span></span><br><span class="line"><span class="comment">            *      2.明确参数列表（考虑这个方法有几个需要参与运算的数）*/</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">sort</span><span class="params">(<span class="type">int</span>[] arr)</span>&#123;</span><br><span class="line">        <span class="comment">//写排序的逻辑</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;arr.length-<span class="number">1</span>;i++)&#123;</span><br><span class="line">            <span class="comment">//内层循环控制列数</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;arr.length-<span class="number">1</span>-i;j++)&#123;</span><br><span class="line">                <span class="comment">//编写对比替换逻辑</span></span><br><span class="line">                <span class="comment">//如果左边的元素比右边的元素大</span></span><br><span class="line">                <span class="keyword">if</span>(arr[j]&gt;arr[j+<span class="number">1</span>])&#123;</span><br><span class="line">                    <span class="comment">//就互换位置</span></span><br><span class="line">                    <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> arr[j];</span><br><span class="line">                    arr[j] = arr[j+<span class="number">1</span>];</span><br><span class="line">                    arr[j+<span class="number">1</span>] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> a</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> b</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">sum</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span>&#123;<span class="comment">//a是形参，因为a里面的值是不确定</span></span><br><span class="line">        <span class="keyword">return</span> a+b;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="七、方法重载"><a href="#七、方法重载" class="headerlink" title="七、方法重载"></a>七、方法重载</h3><ul>
+<li>方法重载（<code>overload</code>）:方法名相同，参数列表不同，与返回值类型无关 <ul>
+<li>注意：参数的顺序不同也算重载，但是实际生产这么写没有意义 什么时候用重载，就是你如果有一套逻辑是相同，但是参数不同，然后你又懒得起一个新的名字，就用重载</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo07</span>方法重载 &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 求2个数的和</span></span><br><span class="line"><span class="comment">         * 求3个数的和</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">sum</span><span class="params">(<span class="type">int</span> a,<span class="type">double</span> b)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (<span class="type">int</span>) (a+b);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">sum</span><span class="params">(<span class="type">int</span> a,<span class="type">double</span> b,<span class="type">int</span> c)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (<span class="type">int</span>) (a+b+c);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="八、面向对象"><a href="#八、面向对象" class="headerlink" title="八、面向对象"></a>八、面向对象</h3><ul>
+<li><p>面向过程：c语言 </p>
+<ul>
+<li>强调的是过程：也就是第一步做什么，第二步做什么。。。</li>
+</ul>
+</li>
+<li><p>面向对象：java python 强调的是结果（对象（对象里面第一步，第二步）） </p>
+<ul>
+<li><p>特点： </p>
+<ul>
+<li>1.可以将复杂的事情，简单化。 </li>
+<li>2.让我们从执行者，变成了指挥者（角色发生了转变）</li>
+</ul>
+</li>
+<li><p>特征： </p>
+<ul>
+<li>1.<code>封装(encapsulation) </code></li>
+<li>2.<code>继承(inheritance) </code></li>
+<li>3.<code>多态(polymorphism) </code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>类和对象 </p>
+<ul>
+<li><p>1.思考1：我们学习编程目的是什么？</p>
+<ul>
+<li>就是为了把日常生活中的事物，用编程语言描述出来，并解决一些问题。</li>
+</ul>
+</li>
+<li><p>2.思考2：我们是如何描述现实世界中的事物的？</p>
+<ul>
+<li>属性：该事物的描述信息（举例：手机：尺寸，颜色，品牌，价格） </li>
+<li>行为：该事物能做什么（举例：手机：打电话，发短信，上网）</li>
+</ul>
+</li>
+<li><p>3.思考3：java中如何描述一个类？</p>
+<ul>
+<li>成员变量：（事物的属性）写在类中，方法外的 </li>
+<li>成员方法：（事物的行为）写在类中，去掉<code>static</code>(static表示静态以后再说) 所以说一个类最基本的一般是由成员变量和成员方法组成的。</li>
+</ul>
+</li>
+<li><p>4.java如何定义一个类 </p>
+<ul>
+<li>其实就是在一个class中，定义成员变量和成员方法</li>
+</ul>
+</li>
+<li><p>5.类和对象之间的关系？ </p>
+<ul>
+<li>类：抽象出一些事物的共有属性和行为</li>
+<li>对象：对该类的具体描述 </li>
+<li>举例： <ul>
+<li>类：学生 </li>
+<li>对象：具体的某一个学生就是对象 </li>
+<li>类：王者荣耀的坦克 </li>
+<li>对象：猪八戒就是对象</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo08</span>面向对象 &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 测试类测试方法</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> args</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 创建一个学生对象</span></span><br><span class="line"><span class="comment">         *   类名 对象名 = new 类名();</span></span><br><span class="line"><span class="comment">         * 如何使用里面的成员变量，成员方法</span></span><br><span class="line"><span class="comment">         * 对象名.变量名</span></span><br><span class="line"><span class="comment">         * 对象名.方法名</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="type">Student</span> <span class="variable">stu</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>();</span><br><span class="line">        stu.name = <span class="string">&quot;Andy&quot;</span>;</span><br><span class="line">        System.out.println(stu.name);</span><br><span class="line">        stu.study();</span><br><span class="line">        <span class="comment">//以上就是创建了学生对象，并使用它来帮助我们存储数据，以及输出功能</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 定义一个手机类，要有属性和行为。。。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 一个.java源文件中，可以有多个class，但是public修饰的只能有一个</span></span><br><span class="line"><span class="comment"> *学生类  封装...  方法的封装，还有类的封装</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *  成员变量</span></span><br><span class="line"><span class="comment">     *  姓名，年龄，性别</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    String name;</span><br><span class="line">    <span class="type">int</span> age;</span><br><span class="line">    String gender;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 成员方法</span></span><br><span class="line"><span class="comment">     * 学习、睡觉</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">study</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;学习...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">sleep</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;睡觉...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>java实训笔记</category>
+      </categories>
+      <tags>
+        <tag>java基础</tag>
+        <tag>javase</tag>
       </tags>
   </entry>
   <entry>
