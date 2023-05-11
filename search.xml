@@ -81,6 +81,50 @@
       </tags>
   </entry>
   <entry>
+    <title>SpringBoot整合第三方技术</title>
+    <url>/post/0.html</url>
+    <content><![CDATA[<h1 id="springBoot整合第三方技术"><a href="#springBoot整合第三方技术" class="headerlink" title="springBoot整合第三方技术"></a>springBoot整合第三方技术</h1><h1 id="整合MyBatis"><a href="#整合MyBatis" class="headerlink" title="整合MyBatis"></a>整合MyBatis</h1><ul>
+<li>核心配置： 数据库连接相关信息</li>
+<li>映射配置：SQL映射（XML&#x2F;注解）</li>
+</ul>
+<h2 id="创建新模块"><a href="#创建新模块" class="headerlink" title="创建新模块"></a>创建新模块</h2><h3 id="选择spring初始化，并配置模块相关基础信息"><a href="#选择spring初始化，并配置模块相关基础信息" class="headerlink" title="选择spring初始化，并配置模块相关基础信息"></a>选择spring初始化，并配置模块相关基础信息</h3><ol>
+<li>选择当前模块需要的技术集（自动导入依赖坐标）</li>
+<li>设置数据源参数</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">spring:</span><br><span class="line">  datasource:</span><br><span class="line">    driver-class-name: com.mysql.jdbc.Driver</span><br><span class="line">    url: jdbc:mysql:<span class="comment">//localhost:3306/ssm</span></span><br><span class="line">    username: root</span><br><span class="line">    password: <span class="number">123456</span></span><br></pre></td></tr></table></figure>
+
+<p>4.定义数据层接口与映射配置</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Mapper</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">BookDao</span> &#123;</span><br><span class="line">    <span class="meta">@Select(&quot;select *from tbl_book where id =#&#123;id&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> Book <span class="title function_">getById</span><span class="params">(Integer id)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>5.测试类注入接口，测试功能</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SpringBootMyBatisApplicationTests</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> BookDao bookDao;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">contextLoads</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(bookDao.getById(<span class="number">1</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="常见问题处理"><a href="#常见问题处理" class="headerlink" title="常见问题处理"></a>常见问题处理</h2><ol>
+<li>MySQL 8.X驱动强制要求设置时区<ul>
+<li>修改url，添加serverTimezone设定</li>
+<li>修改MySQL数据库配置</li>
+</ul>
+</li>
+<li>驱动类过时，提醒更换为com.mysql.cj.jdbc.Driver</li>
+</ol>
+<h1 id="整合MyBatis-Plus"><a href="#整合MyBatis-Plus" class="headerlink" title="整合MyBatis-Plus"></a>整合MyBatis-Plus</h1><h2 id="手动添springBooot整合MybatisPlus坐标"><a href="#手动添springBooot整合MybatisPlus坐标" class="headerlink" title="手动添springBooot整合MybatisPlus坐标"></a>手动添springBooot整合MybatisPlus坐标</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">      &lt;groupId&gt;com.baomidou&lt;/groupId&gt;</span><br><span class="line">      &lt;artifactId&gt;mybatis-plus-boot-starter&lt;/artifactId&gt;</span><br><span class="line">      &lt;version&gt;<span class="number">3.4</span><span class="number">.3</span>&lt;/version&gt;</span><br><span class="line">  &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="定义数据层接口与映射配置，继承BaseMapper"><a href="#定义数据层接口与映射配置，继承BaseMapper" class="headerlink" title="定义数据层接口与映射配置，继承BaseMapper"></a>定义数据层接口与映射配置，继承BaseMapper</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Mapper</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">BookDao</span> <span class="keyword">extends</span> <span class="title class_">BaseMapper</span>&lt;Book&gt; &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="同整合mybatis"><a href="#同整合mybatis" class="headerlink" title="同整合mybatis"></a>同整合mybatis</h2><h1 id="整合Druid"><a href="#整合Druid" class="headerlink" title="整合Druid"></a>整合Druid</h1><h2 id="导入对应的starter"><a href="#导入对应的starter" class="headerlink" title="导入对应的starter"></a>导入对应的starter</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>druid<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.1.16<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="配置对应的设置或采用默认配置"><a href="#配置对应的设置或采用默认配置" class="headerlink" title="配置对应的设置或采用默认配置"></a>配置对应的设置或采用默认配置</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">spring:</span><br><span class="line">  datasource:</span><br><span class="line">    druid:</span><br><span class="line">      driver-class-name: com.mysql.jdbc.Driver</span><br><span class="line">      url: jdbc:mysql://localhost:3306/ssm</span><br><span class="line">      username: root</span><br><span class="line">      password: 123456</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Spring</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>MyBatis</tag>
+        <tag>SpringBoot</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>java基础</title>
     <url>/post/b4562165.html</url>
     <content><![CDATA[<h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><hr>
@@ -557,50 +601,6 @@
       <tags>
         <tag>java基础</tag>
         <tag>javase</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SpringBoot整合第三方技术</title>
-    <url>/post/0.html</url>
-    <content><![CDATA[<h1 id="springBoot整合第三方技术"><a href="#springBoot整合第三方技术" class="headerlink" title="springBoot整合第三方技术"></a>springBoot整合第三方技术</h1><h1 id="整合MyBatis"><a href="#整合MyBatis" class="headerlink" title="整合MyBatis"></a>整合MyBatis</h1><ul>
-<li>核心配置： 数据库连接相关信息</li>
-<li>映射配置：SQL映射（XML&#x2F;注解）</li>
-</ul>
-<h2 id="创建新模块"><a href="#创建新模块" class="headerlink" title="创建新模块"></a>创建新模块</h2><h3 id="选择spring初始化，并配置模块相关基础信息"><a href="#选择spring初始化，并配置模块相关基础信息" class="headerlink" title="选择spring初始化，并配置模块相关基础信息"></a>选择spring初始化，并配置模块相关基础信息</h3><ol>
-<li>选择当前模块需要的技术集（自动导入依赖坐标）</li>
-<li>设置数据源参数</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">spring:</span><br><span class="line">  datasource:</span><br><span class="line">    driver-class-name: com.mysql.jdbc.Driver</span><br><span class="line">    url: jdbc:mysql:<span class="comment">//localhost:3306/ssm</span></span><br><span class="line">    username: root</span><br><span class="line">    password: <span class="number">123456</span></span><br></pre></td></tr></table></figure>
-
-<p>4.定义数据层接口与映射配置</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Mapper</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">BookDao</span> &#123;</span><br><span class="line">    <span class="meta">@Select(&quot;select *from tbl_book where id =#&#123;id&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> Book <span class="title function_">getById</span><span class="params">(Integer id)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>5.测试类注入接口，测试功能</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SpringBootMyBatisApplicationTests</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> BookDao bookDao;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">contextLoads</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(bookDao.getById(<span class="number">1</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="常见问题处理"><a href="#常见问题处理" class="headerlink" title="常见问题处理"></a>常见问题处理</h2><ol>
-<li>MySQL 8.X驱动强制要求设置时区<ul>
-<li>修改url，添加serverTimezone设定</li>
-<li>修改MySQL数据库配置</li>
-</ul>
-</li>
-<li>驱动类过时，提醒更换为com.mysql.cj.jdbc.Driver</li>
-</ol>
-<h1 id="整合MyBatis-Plus"><a href="#整合MyBatis-Plus" class="headerlink" title="整合MyBatis-Plus"></a>整合MyBatis-Plus</h1><h2 id="手动添springBooot整合MybatisPlus坐标"><a href="#手动添springBooot整合MybatisPlus坐标" class="headerlink" title="手动添springBooot整合MybatisPlus坐标"></a>手动添springBooot整合MybatisPlus坐标</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">      &lt;groupId&gt;com.baomidou&lt;/groupId&gt;</span><br><span class="line">      &lt;artifactId&gt;mybatis-plus-boot-starter&lt;/artifactId&gt;</span><br><span class="line">      &lt;version&gt;<span class="number">3.4</span><span class="number">.3</span>&lt;/version&gt;</span><br><span class="line">  &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="定义数据层接口与映射配置，继承BaseMapper"><a href="#定义数据层接口与映射配置，继承BaseMapper" class="headerlink" title="定义数据层接口与映射配置，继承BaseMapper"></a>定义数据层接口与映射配置，继承BaseMapper</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Mapper</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">BookDao</span> <span class="keyword">extends</span> <span class="title class_">BaseMapper</span>&lt;Book&gt; &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="同整合mybatis"><a href="#同整合mybatis" class="headerlink" title="同整合mybatis"></a>同整合mybatis</h2><h1 id="整合Druid"><a href="#整合Druid" class="headerlink" title="整合Druid"></a>整合Druid</h1><h2 id="导入对应的starter"><a href="#导入对应的starter" class="headerlink" title="导入对应的starter"></a>导入对应的starter</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>druid<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.1.16<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="配置对应的设置或采用默认配置"><a href="#配置对应的设置或采用默认配置" class="headerlink" title="配置对应的设置或采用默认配置"></a>配置对应的设置或采用默认配置</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">spring:</span><br><span class="line">  datasource:</span><br><span class="line">    druid:</span><br><span class="line">      driver-class-name: com.mysql.jdbc.Driver</span><br><span class="line">      url: jdbc:mysql://localhost:3306/ssm</span><br><span class="line">      username: root</span><br><span class="line">      password: 123456</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Spring</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-        <tag>MyBatis</tag>
-        <tag>SpringBoot</tag>
       </tags>
   </entry>
   <entry>
